@@ -8271,14 +8271,14 @@
     font-family: "Javassoul";
     font-style: normal;
     font-weight: 400;
-    src: url(localhost/fonts/Javassoul.ttf);
+    src: url(../fonts/Javassoul.ttf);
 }
 
 @font-face {
     font-family: "Hearth Stone";
     font-style: normal;
     font-weight: 400;
-    src: url(localhost/fonts/Hearth-Stone.ttf);
+    src: url(../fonts/Hearth-Stone.ttf);
     line-height: 2;
 }
 
@@ -8286,7 +8286,7 @@
     font-family: "Monoline";
     font-style: normal;
     font-weight: 300;
-    src: url(localhost/fonts/monoline.ttf);
+    src: url(../fonts/monoline.ttf);
     font-display: swap;
 }
 
@@ -8300,17 +8300,17 @@
 
 @font-face {
     font-family: "Newyork";
-    src: url(localhost/fonts/NewYork.otf);
+    src: url(../fonts/NewYork.otf);
 }
 
 @font-face {
     font-family: "Futura-Book";
-    src: url(localhost/fonts/Futura-Book.ttf);
+    src: url(../fonts/Futura-Book.ttf);
 }
 
 @font-face {
     font-family: "August Script Bold free";
-    src: url(localhost/fonts/August-Script.ttf);
+    src: url(../fonts/August-Script.ttf);
 }
 
 @font-face {
@@ -8330,32 +8330,32 @@
 
 @font-face {
     font-family: "javaPalsu";
-    src: url(localhost/fonts/JawaPalsu.woff2);
+    src: url(../fonts/JawaPalsu.woff2);
 }
 
 @font-face {
     font-family: "Kinfolk";
-    src: url(localhost/fonts/FontsFree-Net-Kinfolk_Reg.ttf);
+    src: url(../fonts/FontsFree-Net-Kinfolk_Reg.ttf);
 }
 
 @font-face {
     font-family: "Parisienne";
-    src: url(localhost/fonts/Parisienne.ttf);
+    src: url(../fonts/Parisienne.ttf);
 }
 
 @font-face {
     font-family: "Balingkang";
-    src: url(localhost/fonts/Balingkang.ttf);
+    src: url(../fonts/Balingkang.ttf);
 }
 
 @font-face {
     font-family: "James Ariyale";
-    src: url(localhost/fonts/James-Ariyale.ttf);
+    src: url(../fonts/James-Ariyale.ttf);
 }
 
 @font-face {
     font-family: "Louis George Cafe";
-    src: url(localhost/fonts/Louis-George-Cafe.ttf);
+    src: url(../fonts/Louis-George-Cafe.ttf);
 }
 
 @font-face {
@@ -9214,267 +9214,267 @@
 
 @font-face {
     font-family: "Dita Sweet";
-    src: url(localhost/fonts/Dita-Sweet.ttf);
+    src: url(../fonts/Dita-Sweet.ttf);
 }
 
 @font-face {
     font-family: "Ordinary";
-    src: url(localhost/fonts/Ordinary.ttf);
+    src: url(../fonts/Ordinary.ttf);
 }
 
 @font-face {
     font-family: "Gotham Light";
-    src: url(localhost/fonts/Gotham-Light.otf);
+    src: url(../fonts/Gotham-Light.otf);
 }
 
 @font-face {
     font-family: "Gotham Medium";
-    src: url(localhost/fonts/Gotham-Medium.otf);
+    src: url(../fonts/Gotham-Medium.otf);
 }
 
 @font-face {
     font-family: "Derivia";
-    src: url("localhost/invitation/theme_53/assets/fonts/Derivia-Regular.woff") format("woff");
+    src: url("../fonts/Derivia-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: "Derivia";
-    src: url("localhost/invitation/theme_53/assets/fonts/Derivia-Regular.woff2") format("woff2");
+    src: url("../fonts/Derivia-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Proxima Nova";
-    src: url("localhost/invitation/theme_61/assets/fonts/ProximaNova-Regular.woff") format("woff");
+    src: url("../fonts/ProximaNova-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: "Proxima Nova";
-    src: url("localhost/invitation/theme_61/assets/fonts/ProximaNova-Regular.woff2") format("woff2");
+    src: url("../fonts/ProximaNova-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Palantino";
     font-style: normal;
     font-weight: 300;
-    src: url(localhost/fonts/palantino.ttf);
+    src: url(../fonts/palantino.ttf);
     font-display: swap;
 }
 
 @font-face {
     font-family: "Canela Regular";
-    src: url("localhost/fonts/Canela Regular.otf");
+    src: url("../fonts/Canela Regular.otf");
 }
 
 @font-face {
     font-family: "Mynaruse";
-    src: url("localhost/fonts/Mynaruse.ttf");
+    src: url("../fonts/Mynaruse.ttf");
 }
 
 @font-face {
     font-family: "Classico";
-    src: url("localhost/fonts/Classico.otf");
+    src: url("../fonts/Classico.otf");
 }
 
 @font-face {
     font-family: "Bradley Hand";
-    src: url("localhost/fonts/Bradley Hand.ttf");
+    src: url("../fonts/Bradley Hand.ttf");
 }
 
 @font-face {
     font-family: "Mulish";
-    src: url("localhost/fonts/Mulish.ttf");
+    src: url("../fonts/Mulish.ttf");
 }
 
 @font-face {
     font-family: "Dellucion";
-    src: url("localhost/fonts/Dellucion.ttf");
+    src: url("../fonts/Dellucion.ttf");
 }
 
 @font-face {
     font-family: "Exmouth";
-    src: url("localhost/fonts/Exmouth.ttf");
+    src: url("../fonts/Exmouth.ttf");
 }
 
 @font-face {
     font-family: "Gotham Book";
-    src: url("localhost/fonts/Gotham Book.otf");
+    src: url("../fonts/Gotham Book.otf");
 }
 
 @font-face {
     font-family: "GT America Mono Light";
-    src: url("localhost/fonts/GT America Mono Light.otf");
+    src: url("../fonts/GT America Mono Light.otf");
 }
 
 @font-face {
     font-family: "Fogtwo No5";
-    src: url("localhost/fonts/Fogtwo No5.ttf");
+    src: url("../fonts/Fogtwo No5.ttf");
 }
 
 @font-face {
     font-family: "Bacalisties";
-    src: url("localhost/fonts/Bacalisties.ttf");
+    src: url("../fonts/Bacalisties.ttf");
 }
 
 @font-face {
     font-family: "Milton One Bold";
-    src: url("localhost/fonts/Milton One Bold.otf");
+    src: url("../fonts/Milton One Bold.otf");
 }
 
 @font-face {
     font-family: "Petit Formal Script";
-    src: url("localhost/fonts/Petit Formal Script.ttf");
+    src: url("../fonts/Petit Formal Script.ttf");
 }
 
 @font-face {
     font-family: "Le Major";
-    src: url("localhost/fonts/Le Major.ttf");
+    src: url("../fonts/Le Major.ttf");
     line-height: 1.6;
 }
 
 @font-face {
     font-family: "BrittanySignature";
-    src: url("localhost/fonts/BrittanySignature.TTF");
+    src: url("../fonts/BrittanySignature.TTF");
     line-height: 2;
 }
 
 @font-face {
     font-family: "Cardinal";
-    src: url("localhost/fonts/Cardinal.ttf");
+    src: url("../fonts/Cardinal.ttf");
 }
 
 @font-face {
     font-family: "Cardinal Alternate";
-    src: url("localhost/fonts/Cardinal Alternate.ttf");
+    src: url("../fonts/Cardinal Alternate.ttf");
 }
 
 @font-face {
     font-family: "Baskervville";
-    src: url("localhost/fonts/Baskervville.ttf");
+    src: url("../fonts/Baskervville.ttf");
 }
 
 @font-face {
     font-family: "Frank Ruhl Libre";
-    src: url("localhost/fonts/Frank Ruhl Libre.ttf");
+    src: url("../fonts/Frank Ruhl Libre.ttf");
 }
 
 @font-face {
     font-family: "Baskerville Classico";
-    src: url("localhost/fonts/Baskerville Classico.ttf");
+    src: url("../fonts/Baskerville Classico.ttf");
 }
 
 @font-face {
     font-family: 'Baskerville Old Face';
-    src: url("localhost/fonts/Baskerville Old Face.ttf");
+    src: url("../fonts/Baskerville Old Face.ttf");
 }
 
 @font-face {
     font-family: "Roustel";
-    src: url("localhost/fonts/Roustel.ttf");
+    src: url("../fonts/Roustel.ttf");
 }
 
 @font-face {
     font-family: "Carmilla";
-    src: url("localhost/fonts/Carmilla.otf");
+    src: url("../fonts/Carmilla.otf");
 }
 
 @font-face {
     font-family: "Abhaya Libre";
-    src: url("localhost/fonts/Abhaya Libre.ttf");
+    src: url("../fonts/Abhaya Libre.ttf");
 }
 
 @font-face {
     font-family: "Calibri";
-    src: url("localhost/fonts/Calibri.ttf");
+    src: url("../fonts/Calibri.ttf");
 }
 
 @font-face {
     font-family: "Thesignature";
-    src: url("localhost/fonts/Thesignature.ttf");
+    src: url("../fonts/Thesignature.ttf");
 }
 
 @font-face {
     font-family: "Milyuna";
-    src: url("localhost/fonts/Milyuna.ttf");
+    src: url("../fonts/Milyuna.ttf");
 }
 
 @font-face {
     font-family: "Gallery Modern";
-    src: url("localhost/fonts/Gallery Modern.otf");
+    src: url("../fonts/Gallery Modern.otf");
 }
 
 @font-face {
     font-family: "NT Fabulous Alternative";
-    src: url("localhost/fonts/NT Fabulous Alternative.otf");
+    src: url("../fonts/NT Fabulous Alternative.otf");
 }
 
 @font-face {
     font-family: "Batrisyia Script";
-    src: url("localhost/fonts/Batrisyia Script.ttf");
+    src: url("../fonts/Batrisyia Script.ttf");
 }
 
 @font-face {
     font-family: "Maratre";
-    src: url("localhost/fonts/Maratre.otf");
+    src: url("../fonts/Maratre.otf");
 }
 
 @font-face {
     font-family: "MyriadPro Bold";
-    src: url("localhost/fonts/MyriadPro Bold.ttf");
+    src: url("../fonts/MyriadPro Bold.ttf");
 }
 
 @font-face {
     font-family: "MyriadPro Regular";
-    src: url("localhost/fonts/MyriadPro Regular.ttf");
+    src: url("../fonts/MyriadPro Regular.ttf");
 }
 
 @font-face {
     font-family: "SentyDragonPalace";
-    src: url("localhost/fonts/SentyDragonPalace.ttf");
+    src: url("../fonts/SentyDragonPalace.ttf");
 }
 
 @font-face {
     font-family: "MoonTime";
-    src: url("localhost/fonts/MoonTime.ttf");
+    src: url("../fonts/MoonTime.ttf");
 }
 
 @font-face {
     font-family: "Hello";
-    src: url("localhost/fonts/Hello.ttf");
+    src: url("../fonts/Hello.ttf");
 }
 
 @font-face {
     font-family: "Helvetica";
-    src: url("localhost/fonts/Helvetica.ttf") format('ttf');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Helvetica";
-    src: url("localhost/fonts/Helvetica.woff") format('woff');
+    src: url("../fonts/Helvetica.ttf") format('ttf');
     font-display: swap;
 }
 
 @font-face {
     font-family: "Helvetica";
-    src: url("localhost/fonts/Helvetica.woff2") format('woff2');
+    src: url("../fonts/Helvetica.woff") format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("../fonts/Helvetica.woff2") format('woff2');
     font-display: swap;
 }
 
 @font-face {
     font-family: "book antiqua";
-    src: url(localhost/fonts/BookAntiqua.ttf) format("ttf");
+    src: url(../fonts/BookAntiqua.ttf) format("ttf");
     font-display: swap;
 }
 
 @font-face {
     font-family: "book antiqua";
-    src: url(localhost/fonts/BookAntiqua.woff) format("woff");
+    src: url(../fonts/BookAntiqua.woff) format("woff");
     font-display: swap;
 }
 
 @font-face {
     font-family: "book antiqua";
-    src: url(localhost/fonts/BookAntiqua.woff2) format("woff2");
+    src: url(../fonts/BookAntiqua.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -9540,140 +9540,140 @@
 
 @font-face {
     font-family: "Moles";
-    src: url(localhost/fonts/MolesRegular.ttf) format('ttf');
+    src: url(../fonts/MolesRegular.ttf) format('ttf');
     font-display: swap;
 }
 
 @font-face {
     font-family: "Moles";
-    src: url(localhost/fonts/MolesRegular.woff) format('woff');
+    src: url(../fonts/MolesRegular.woff) format('woff');
     font-display: swap;
 }
 
 @font-face {
     font-family: "Moles";
-    src: url(localhost/fonts/MolesRegular.woff2) format('woff2');
+    src: url(../fonts/MolesRegular.woff2) format('woff2');
     font-display: swap;
 }
 
 @font-face {
     font-family: "Garamon";
-    src: url("localhost/fonts/Garamon.otf");
+    src: url("../fonts/Garamon.otf");
 }
 
 @font-face {
     font-family: "Tangerine Regular";
-    src: url("localhost/fonts/Tangerine Regular.ttf");
+    src: url("../fonts/Tangerine Regular.ttf");
 }
 
 @font-face {
     font-family: "Tangerine";
-    src: url("localhost/fonts/Tangerine.otf");
+    src: url("../fonts/Tangerine.otf");
 }
 
 @font-face {
     font-family: "Felixti";
-    src: url("localhost/fonts/Felixti.TTF");
+    src: url("../fonts/Felixti.TTF");
 }
 
 @font-face {
     font-family: "Canela";
-    src: url("localhost/fonts/Canela.otf");
+    src: url("../fonts/Canela.otf");
 }
 
 @font-face {
     font-family: "Canela Thin";
-    src: url("localhost/fonts/Canela Thin.otf");
+    src: url("../fonts/Canela Thin.otf");
 }
 
 @font-face {
     font-family: "Foglihten";
-    src: url("localhost/fonts/Foglihten.otf");
+    src: url("../fonts/Foglihten.otf");
 }
 
 @font-face {
     font-family: "Breadley Sans";
-    src: url("localhost/fonts/Breadley Sans.ttf");
+    src: url("../fonts/Breadley Sans.ttf");
 }
 
 @font-face {
     font-family: "Bestigia";
-    src: url("localhost/fonts/Bestigia.ttf");
+    src: url("../fonts/Bestigia.ttf");
 }
 
 @font-face {
     font-family: "Asmelina Harley";
-    src: url("localhost/fonts/Asmelina Harley.ttf");
+    src: url("../fonts/Asmelina Harley.ttf");
 }
 
 @font-face {
     font-family: "The Seasons";
-    src: url("localhost/fonts/The Seasons.otf");
+    src: url("../fonts/The Seasons.otf");
 }
 
 @font-face {
     font-family: "Gilroy Regular";
-    src: url("localhost/fonts/Gilroy Regular.ttf");
+    src: url("../fonts/Gilroy Regular.ttf");
 }
 
 @font-face {
     font-family: "Gilroy Bold";
-    src: url("localhost/fonts/Gilroy Bold.ttf");
+    src: url("../fonts/Gilroy Bold.ttf");
 }
 
 @font-face {
     font-family: "Gilroy ExtraBold";
-    src: url("localhost/fonts/Gilroy ExtraBold.ttf");
+    src: url("../fonts/Gilroy ExtraBold.ttf");
 }
 
 @font-face {
     font-family: "Gilroy Light";
-    src: url("localhost/fonts/Gilroy Light.ttf");
+    src: url("../fonts/Gilroy Light.ttf");
 }
 
 @font-face {
     font-family: "Marienda";
-    src: url("localhost/fonts/Marienda.ttf");
+    src: url("../fonts/Marienda.ttf");
 }
 
 @font-face {
     font-family: "Sofia Pro";
-    src: url("localhost/fonts/Sofia Pro.otf");
+    src: url("../fonts/Sofia Pro.otf");
 }
 
 @font-face {
     font-family: "Beausite Classic";
-    src: url("localhost/fonts/Beausite Classic.ttf");
+    src: url("../fonts/Beausite Classic.ttf");
 }
 
 @font-face {
     font-family: "Beausite Fit";
-    src: url("localhost/fonts/Beausite Fit.otf");
+    src: url("../fonts/Beausite Fit.otf");
 }
 
 @font-face {
     font-family: "Bodoni Moda";
-    src: url("localhost/fonts/Bodoni Moda.ttf");
+    src: url("../fonts/Bodoni Moda.ttf");
 }
 
 @font-face {
     font-family: "Prompt";
-    src: url("localhost/fonts/Prompt.ttf");
+    src: url("../fonts/Prompt.ttf");
 }
 
 @font-face {
     font-family: "Marchila";
-    src: url("localhost/fonts/Marchila.otf");
+    src: url("../fonts/Marchila.otf");
 }
 
 @font-face {
     font-family: "Against";
-    src: url("localhost/fonts/Against.otf");
+    src: url("../fonts/Against.otf");
 }
 
 @font-face {
     font-family: "Pinyon Script";
-    src: url("localhost/fonts/Pinyon Script.ttf");
+    src: url("../fonts/Pinyon Script.ttf");
 }
 
 [style^="font-family: BrittanySignature;"],
@@ -9702,120 +9702,115 @@
 
 @font-face {
     font-family: "Gayathri";
-    src: url("localhost/fonts/Gayathri.ttf");
+    src: url("../fonts/Gayathri.ttf");
 }
 
 @font-face {
     font-family: "Dustismo Roman";
-    src: url("localhost/fonts/Dustismo_Roman.ttf");
+    src: url("../fonts/Dustismo_Roman.ttf");
 }
 
 @font-face {
     font-family: "Sora";
-    src: url("localhost/fonts/Sora-Regular.ttf");
+    src: url("../fonts/Sora-Regular.ttf");
 }
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("localhost/fonts/Ubuntu.ttf");
+    src: url("../fonts/Ubuntu.ttf");
 }
 
 @font-face {
     font-family: "Saint Bartogenia";
-    src: url("localhost/fonts/Saint Bartogenia.otf");
+    src: url("../fonts/Saint Bartogenia.otf");
 }
 
 @font-face {
     font-family: "Cathylise Janetson";
-    src: url("localhost/fonts/Cathylise Janetson.otf");
+    src: url("../fonts/Cathylise Janetson.otf");
 }
 
 @font-face {
     font-family: "CharlesSebastian";
-    src: url("localhost/fonts/CharlesSebastian.ttf");
+    src: url("../fonts/CharlesSebastian.ttf");
 }
 
 @font-face {
     font-family: "BrockScript";
-    src: url("localhost/fonts/BrockScript.ttf");
+    src: url("../fonts/BrockScript.ttf");
 }
 
 @font-face {
     font-family: "Fondest";
-    src: url("localhost/fonts/Fondest.ttf");
+    src: url("../fonts/Fondest.ttf");
 }
 
 @font-face {
     font-family: "Millionaire-Roman";
-    src: url("localhost/fonts/Millionaire-Roman.otf");
+    src: url("../fonts/Millionaire-Roman.otf");
 }
 
 @font-face {
     font-family: "Millionaire-Italic";
-    src: url("localhost/fonts/Millionaire-Italic.otf");
+    src: url("../fonts/Millionaire-Italic.otf");
 }
 
 @font-face {
     font-family: "Millionaire-Script";
-    src: url("localhost/fonts/Millionaire-Script.otf");
+    src: url("../fonts/Millionaire-Script.otf");
 }
 
 @font-face {
     font-family: "Romie";
-    src: url("localhost/fonts/Romie.otf");
+    src: url("../fonts/Romie.otf");
 }
 
 @font-face {
     font-family: "arial black";
-    src: url("localhost/fonts/Arial-Black.woff2") format('woff2');
+    src: url("../fonts/Arial-Black.woff2") format('woff2');
     font-display: swap;
 }
 
 @font-face {
     font-family: "Arial Black";
-    src: url("localhost/fonts/Arial-Black.woff2") format('woff2');
+    src: url("../fonts/Arial-Black.woff2") format('woff2');
     font-display: swap;
 }
 
 @font-face {
     font-family: "Edensor";
-    src: url("localhost/fonts/EdensorFree.woff") format("woff"), url("localhost/fonts/EdensorFree.woff2") format("woff2");
+    src: url("../fonts/EdensorFree.woff") format("woff"), url("../fonts/EdensorFree.woff2") format("woff2");
     font-display: swap;
 }
 
 
-@font-face {font-family: "Ethereal"; src: url("localhost/fonts/Ethereal.otf");}
-@font-face {font-family: "Flawsome"; src: url("localhost/fonts/Flawsome.ttf");}
-@font-face {font-family: "VilakaModern"; src: url("localhost/fonts/VilakaModern.ttf");}
+@font-face {font-family: "Ethereal"; src: url("../fonts/Ethereal.otf");}
+@font-face {font-family: "Flawsome"; src: url("../fonts/Flawsome.ttf");}
+@font-face {font-family: "VilakaModern"; src: url("../fonts/VilakaModern.ttf");}
 
-@font-face {font-family: "Brilon"; src: url("localhost/fonts/Brilon.OTF");}
-@font-face {font-family: "Frozito"; src: url("localhost/fonts/Frozito.ttf");}
-@font-face {font-family: "Livory"; src: url("localhost/fonts/Livory.otf");}
-@font-face {font-family: "DTNightingale"; src: url("localhost/fonts/DTNightingale.ttf");}
-@font-face {font-family: "GeorgiaBallparkSerif"; src: url("localhost/fonts/GeorgiaBallparkSerif.otf");}
-@font-face {font-family: "GeorgiaBallparkScript"; src: url("localhost/fonts/GeorgiaBallparkScript.otf");}
-@font-face {font-family: "MarlaGriseldaDemo"; src: url("localhost/fonts/MarlaGriseldaDemo.otf");}
-@font-face {font-family: "WilmaMankilleroOld"; src: url("localhost/fonts/WilmaMankilleroOld.ttf");}
-@font-face {font-family: "HattonMedium"; src: url("localhost/fonts/HattonMedium.otf");}
-@font-face {font-family: "HattonUltralight"; src: url("localhost/fonts/HattonUltralight.otf");}
-@font-face {font-family: "Ara"; src: url("localhost/fonts/Ara.php");}
-@font-face {font-family: "Arial Greek Light"; src: url("../../../fonts/Arial%20Greek%20Light.html");}
-@font-face {font-family: "Cambria"; src: url("localhost/fonts/Cambria.php");}
-@font-face {font-family: "Youkiss"; src: url("localhost/fonts/Youkiss.ttf");}
-@font-face {font-family: "Silkscreen-Regular"; src: url("localhost/fonts/Silkscreen-Regular.ttf");}
-@font-face {font-family: "Boheme_Floral"; src: url("localhost/fonts/Boheme_Floral.ttf");}
-@font-face {font-family: "Bodoni BK"; src: url("localhost/fonts/Bodoni BK.ttf");}
-@font-face {font-family: "Monaco"; src: url("localhost/fonts/Monaco.ttf");}
-@font-face {font-family: "Boheme_Floral"; src: url("localhost/fonts/Boheme_Floral.ttf");}
-@font-face {font-family: "Bodoni BK"; src: url("localhost/fonts/Bodoni BK.ttf");}
-@font-face {font-family: "Figtree-Regular"; src: url("localhost/fonts/Figtree-Regular.otf");}
-@font-face {font-family: "Figtree-SemiBold"; src: url("localhost/fonts/Figtree-SemiBold.otf");}
-@font-face {font-family: "D-DIN"; src: url("localhost/fonts/D-DIN.ttf");}
-@font-face {font-family: "Farmhouse"; src: url("localhost/fonts/Farmhouse.ttf");}
-@font-face {font-family: "CabinetGrotesk"; src: url("localhost/fonts/CabinetGrotesk.otf");}
-@font-face {font-family: "ZTBrosOskon"; src: url("localhost/fonts/ZTBrosOskon.otf");}
-@font-face {font-family: "Athelas"; src: url("localhost/fonts/Athelas.ttf");}
-@font-face {font-family: "Magnolia Script"; src: url("localhost/fonts/Magnolia Script.otf");}
-@font-face {font-family: "Oooh Baby"; src: url("localhost/fonts/Oooh Baby.ttf");}
-@font-face {font-family: "IntroRust"; src: url("localhost/fonts/IntroRust.otf");}
-@font-face {font-family: "GoodTime Script"; src: url("localhost/fonts/GoodTime Script.otf");}
+@font-face {font-family: "Brilon"; src: url("../fonts/Brilon.OTF");}
+@font-face {font-family: "Frozito"; src: url("../fonts/Frozito.ttf");}
+@font-face {font-family: "Livory"; src: url("../fonts/Livory.otf");}
+@font-face {font-family: "DTNightingale"; src: url("../fonts/DTNightingale.ttf");}
+@font-face {font-family: "GeorgiaBallparkSerif"; src: url("../fonts/GeorgiaBallparkSerif.otf");}
+@font-face {font-family: "GeorgiaBallparkScript"; src: url("../fonts/GeorgiaBallparkScript.otf");}
+@font-face {font-family: "MarlaGriseldaDemo"; src: url("../fonts/MarlaGriseldaDemo.otf");}
+@font-face {font-family: "WilmaMankilleroOld"; src: url("../fonts/WilmaMankilleroOld.ttf");}
+@font-face {font-family: "HattonMedium"; src: url("../fonts/HattonMedium.otf");}
+@font-face {font-family: "HattonUltralight"; src: url("../fonts/HattonUltralight.otf");}
+@font-face {font-family: "Youkiss"; src: url("../fonts/Youkiss.ttf");}
+@font-face {font-family: "Silkscreen-Regular"; src: url("../fonts/Silkscreen-Regular.ttf");}
+@font-face {font-family: "Boheme_Floral"; src: url("../fonts/Boheme_Floral.ttf");}
+@font-face {font-family: "Bodoni BK"; src: url("../fonts/Bodoni BK.ttf");}
+@font-face {font-family: "Monaco"; src: url("../fonts/Monaco.ttf");}
+@font-face {font-family: "Figtree-Regular"; src: url("../fonts/Figtree-Regular.otf");}
+@font-face {font-family: "Figtree-SemiBold"; src: url("../fonts/Figtree-SemiBold.otf");}
+@font-face {font-family: "D-DIN"; src: url("../fonts/D-DIN.ttf");}
+@font-face {font-family: "Farmhouse"; src: url("../fonts/Farmhouse.ttf");}
+@font-face {font-family: "CabinetGrotesk"; src: url("../fonts/CabinetGrotesk.otf");}
+@font-face {font-family: "ZTBrosOskon"; src: url("../fonts/ZTBrosOskon.otf");}
+@font-face {font-family: "Athelas"; src: url("../fonts/Athelas.ttf");}
+@font-face {font-family: "Magnolia Script"; src: url("../fonts/Magnolia Script.otf");}
+@font-face {font-family: "Oooh Baby"; src: url("../fonts/Oooh Baby.ttf");}
+@font-face {font-family: "IntroRust"; src: url("../fonts/IntroRust.otf");}
+@font-face {font-family: "GoodTime Script"; src: url("../fonts/GoodTime Script.otf");}
