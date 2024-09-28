@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('couple', function (Blueprint $table) {
+        Schema::create('couples', function (Blueprint $table) {
             $table->id();
             $table->enum('couple_type', ['cpp', 'cpw']);
             $table->string('name');
