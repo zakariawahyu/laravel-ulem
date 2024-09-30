@@ -19,6 +19,7 @@ return new class extends Migration
             $table->dateTime('date');
             $table->string('map');
             $table->timestamps();
+            $table->softDeletes('deleted_at');
         });
     }
 

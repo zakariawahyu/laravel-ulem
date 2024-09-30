@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('instagram_url');
             $table->timestamps();
+            $table->softDeletes('deleted_at');
         });
     }
 
