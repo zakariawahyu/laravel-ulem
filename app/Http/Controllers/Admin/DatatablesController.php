@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+
+use App\Models\Couple;
+use Yajra\DataTables\DataTables;
+
+class DatatablesController extends Controller
+{
+    protected $customConfig;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+    */
+    public function __construct()
+    {
+        $this->customConfig = config('custom');
+    }
+
+    public function couple() {
+
+        $couple = Couple::query()->whereNull('deleted_at');
+
+        return DataTables::of($couple)
+            ->addColumn('action', function($couple){
+                return'
+                <div class="text-center">
+                    <a href='.route('couple.show', $couple->id).' class="btn btn-sm btn-success" title="Show"><i class="fa fa-eye"></i> Show</a>
+                    <a href='.route('couple.edit', $couple->id).' class="btn btn-sm btn-dark" title="Edit"><i class="fa fa-edit"></i> Edit</a>
+                    <a href='.route('couple.delete', $couple->id).' class="btn btn-sm btn-danger" title="Delete"><i class="fa fa-trash"></i> Delete</a>
+                </div>';
+            })
+            ->addColumn('couple_type', function($couple){
+                return $this->customConfig['couple_type'][($couple->couple_type)];
+            })
+            ->addIndexColumn()
+            ->rawColumns(['action'])
+            ->make(true);
+    }
+}

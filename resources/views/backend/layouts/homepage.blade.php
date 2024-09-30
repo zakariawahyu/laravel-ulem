@@ -22,5 +22,7 @@
         </div>
     </div>
     @include('backend.layouts.script')
+
+    @yield('viewJs')
 </body>
 </html>

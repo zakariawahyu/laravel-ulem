@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/typeahead-js/typeahead.css')}}" />
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/apex-charts/apex-charts.css')}}" />
+    <link rel="stylesheet" href="{{ asset('assets/backend/libs/datatables-bs5/datatables.bootstrap5.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/backend/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}">
 
     <!-- Helpers -->
     <script src="{{ asset('assets/backend/js/helpers.js')}}"></script>
@@ -40,4 +42,18 @@
 
     <!-- Custom notification for demo -->
     <!-- beautify ignore:end -->
+
+    <style>
+        .required {
+            color: red
+        }
+        .hidden {
+            display: none
+        }
+
+        .image-output {
+            max-width: 250px;
+            height: auto;
+        }
+    </style>
 </head>

@@ -10,6 +10,12 @@
 <script src="{{ asset('assets/backend/js/menu.js')}}"></script>
 <!-- endbuild -->
 
+<!-- Datatable JS -->
+<script src="{{ asset('assets/backend/libs/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('assets/backend/libs/datatables-bs5/datatables-bootstrap5.js') }}"></script>
+<script src="{{ asset('assets/backend/libs/datatables-responsive/datatables.responsive.js') }}"></script>
+<script src="{{ asset('assets/backend/libs/datatables-responsive-bs5/responsive.bootstrap5.js') }}"></script>
+
 <!-- Vendors JS -->
 <script src="{{ asset('assets/backend/libs/apex-charts/apexcharts.js')}}"></script>
 
