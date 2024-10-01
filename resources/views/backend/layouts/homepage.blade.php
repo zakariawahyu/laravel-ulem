@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed">
     @include('backend.layouts.header')
 <body>
     <div class="layout-wrapper layout-content-navbar">

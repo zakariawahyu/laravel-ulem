@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('address');
             $table->dateTime('date');
-            $table->string('map');
+            $table->text('map');
             $table->timestamps();
             $table->softDeletes('deleted_at');
         });

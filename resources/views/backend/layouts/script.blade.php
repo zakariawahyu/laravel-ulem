@@ -17,10 +17,7 @@
 <script src="{{ asset('assets/backend/libs/datatables-responsive-bs5/responsive.bootstrap5.js') }}"></script>
 
 <!-- Vendors JS -->
-<script src="{{ asset('assets/backend/libs/apex-charts/apexcharts.js')}}"></script>
+<script src="{{  asset('assets/backend/libs/flatpickr/flatpickr.js') }}"></script>
 
 <!-- Main JS -->
 <script src="{{ asset('assets/backend/js/main.js')}}"></script>
-
-<!-- Page JS -->
-<script src="{{ asset('assets/backend/js/dashboards-analytics.js')}}"></script>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Couple;
 use App\Models\Gallery;
+use App\Models\VenueDetail;
 use Yajra\DataTables\DataTables;
 
 class DatatablesController extends Controller
@@ -64,6 +65,24 @@ class DatatablesController extends Controller
             })
             ->addIndexColumn()
             ->rawColumns(['action', 'image'])
+            ->make(true);
+    }
+
+    public function venueDetail() {
+
+        $venueDetail = VenueDetail::query()->whereNull('deleted_at');
+
+        return DataTables::of($venueDetail)
+            ->addColumn('action', function($venueDetail){
+                return'
+                <div class="text-center">
+                    <a href='.route('venue-detail.show', $venueDetail->id).' class="btn btn-sm btn-success" title="Show"><i class="fa fa-eye"></i> Show</a>
+                    <a href='.route('venue-detail.edit', $venueDetail->id).' class="btn btn-sm btn-dark" title="Edit"><i class="fa fa-edit"></i> Edit</a>
+                    <a href='.route('venue-detail.delete', $venueDetail->id).' class="btn btn-sm btn-danger" title="Delete"><i class="fa fa-trash"></i> Delete</a>
+                </div>';
+            })
+            ->addIndexColumn()
+            ->rawColumns(['action'])
             ->make(true);
     }
 }

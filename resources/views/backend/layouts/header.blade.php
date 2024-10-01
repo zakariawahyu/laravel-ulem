@@ -28,9 +28,11 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/typeahead-js/typeahead.css')}}" />
-    <link rel="stylesheet" href="{{ asset('assets/backend/libs/apex-charts/apex-charts.css')}}" />
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/datatables-bs5/datatables.bootstrap5.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/backend/libs/flatpickr/flatpickr.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/backend/libs/pickr/pickr-themes.css') }}" />
+
 
     <!-- Helpers -->
     <script src="{{ asset('assets/backend/js/helpers.js')}}"></script>
