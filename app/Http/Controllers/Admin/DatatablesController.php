@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use App\Models\Couple;
+use App\Models\Gallery;
 use Yajra\DataTables\DataTables;
 
 class DatatablesController extends Controller
@@ -39,6 +40,30 @@ class DatatablesController extends Controller
             })
             ->addIndexColumn()
             ->rawColumns(['action'])
+            ->make(true);
+    }
+
+    public function gallery() {
+
+        $gallery = Gallery::query()->whereNull('deleted_at');
+
+        return DataTables::of($gallery)
+            ->addColumn('action', function($gallery){
+                return'
+                <div class="text-center">
+                    <a href='.route('gallery.show', $gallery->id).' class="btn btn-sm btn-success" title="Show"><i class="fa fa-eye"></i> Show</a>
+                    <a href='.route('gallery.edit', $gallery->id).' class="btn btn-sm btn-dark" title="Edit"><i class="fa fa-edit"></i> Edit</a>
+                    <a href='.route('gallery.delete', $gallery->id).' class="btn btn-sm btn-danger" title="Delete"><i class="fa fa-trash"></i> Delete</a>
+                </div>';
+            })
+            ->editColumn('image', function($gallery){
+                return '
+                <div class="text-center">
+                    <img class="img-fluid rounded" src="'.asset('images/'.$gallery->image).'" width="250px" height="auto">
+                </div>';
+            })
+            ->addIndexColumn()
+            ->rawColumns(['action', 'image'])
             ->make(true);
     }
 }
