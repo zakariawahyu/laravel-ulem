@@ -17,9 +17,10 @@
       <div class="card-body">
         <div class="user-avatar-section">
           <div class="d-flex align-items-center flex-column">
-            <img class="img-fluid rounded my-4" src="{{ asset('images/'.$couple->image) }}" height="180" width="180" />
+            <img class="img-fluid rounded" src="{{ asset('images/'.$couple->image) }}" height="180" width="180" />
+            <span>{{ $couple->image_caption }}</span>
             <div class="user-info text-center">
-              <h4 class="mb-2">{{ $couple->name }}</h4>
+              <h4 class="mt-3">{{ $couple->name }}</h4>
             </div>
           </div>
         </div>

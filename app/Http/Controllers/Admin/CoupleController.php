@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CoupleRequest;
 use App\Libraries\UploadImage;
 use App\Models\Couple;
-use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CoupleController extends Controller
 {
@@ -37,7 +37,8 @@ class CoupleController extends Controller
         $imageName  = '';
 
         if ($request->hasFile('image')) {
-            $imageName = (new UploadImage)->upload();
+            $caption = Str::slug($data['image_caption']);
+            $imageName = (new UploadImage)->upload($caption);
         }
 
         $data['image'] = $imageName;
@@ -85,7 +86,8 @@ class CoupleController extends Controller
         $imageName  = '';
 
         if ($request->hasFile('image')) {
-            $imageName = (new UploadImage)->upload();
+            $caption = Str::slug($data['image_caption']);
+            $imageName = (new UploadImage)->upload($caption);
 
             $data['image'] = $imageName;
         }

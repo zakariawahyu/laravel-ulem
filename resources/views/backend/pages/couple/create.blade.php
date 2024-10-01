@@ -76,6 +76,13 @@
                         @endif
                     </div>
                     <div class="mb-3">
+                        <label class="form-label">Image Caption <i class="required">*</i></label>
+                        <input type="text" name="image_caption" class="form-control {{ ($errors->any() && $errors->has('image_caption')) ? 'is-invalid' : '' }}" placeholder="Insert Image Caption" value="{{ old('image_caption') }}" />
+                        @if ($errors->any() && $errors->has('image_caption'))
+                            <div class="invalid-feedback">{{ $errors->first('image_caption') }}</div>
+                        @endif
+                    </div>
+                    <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>

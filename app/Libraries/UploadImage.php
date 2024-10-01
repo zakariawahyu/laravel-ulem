@@ -3,10 +3,10 @@
 namespace App\Libraries;
 
 class UploadImage {
-    public function upload() {
+    public function upload($caption) {
         $request    = request();
         $file       = request()->file('image');
-        $imageName  = $file->hashName();
+        $imageName  = $caption.".".$file->getClientOriginalExtension();
 
         $request->image->move(public_path('images'), $imageName);
 

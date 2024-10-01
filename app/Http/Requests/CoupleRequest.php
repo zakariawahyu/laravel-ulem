@@ -37,6 +37,7 @@ class CoupleRequest extends FormRequest
             'father_name'           => 'required|max:255',
             'mother_name'           => 'required|max:255',
             'image'                 => 'sometimes|required|image|mimes:jpg,jpeg,png',
+            'image_caption'         => 'required|max:255',
             'instagram_url'         => 'required|url:https|max:255'
         ];
     }

@@ -11,5 +11,5 @@ class Couple extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['couple_type', 'name', 'parent_description', 'father_name', 'mother_name', 'image', 'instagram_url'];
+    protected $fillable = ['couple_type', 'name', 'parent_description', 'father_name', 'mother_name', 'image', 'image_caption', 'instagram_url'];
 }

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('father_name');
             $table->string('mother_name');
             $table->string('image');
+            $table->string('image_caption');
             $table->string('instagram_url');
             $table->timestamps();
             $table->softDeletes('deleted_at');
