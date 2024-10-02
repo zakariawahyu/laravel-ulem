@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ConfigurationController;
 use App\Http\Controllers\Admin\CoupleController;
 use App\Http\Controllers\Admin\DatatablesController;
 use App\Http\Controllers\Admin\GalleryController;
@@ -12,12 +13,15 @@ Route::get('/', function () {
 });
 
 Route::prefix('mimin')->middleware([])->group(function () {
-    Route::prefix('datatable')->name('datatable.')->group(function () {
-        Route::controller(DatatablesController::class)->group(function () {
-            Route::get('/couple', 'couple')->name('couple');
-            Route::get('/gallery', 'gallery')->name('gallery');
-            Route::get('/venue-detail', 'venueDetail')->name('venue-detail');
-        });
+    Route::controller(DatatablesController::class)->prefix('datatable')->name('datatable.')->group(function () {
+        Route::get('/couple', 'couple')->name('couple');
+        Route::get('/gallery', 'gallery')->name('gallery');
+        Route::get('/venue-detail', 'venueDetail')->name('venue-detail');
+    });
+
+    Route::controller(ConfigurationController::class)->prefix('configuration')->name('configuration.')->group(function () {
+        Route::get('/meta', 'meta')->name('meta');
+        Route::post('/meta', 'saveMeta')->name('meta.save');
     });
 
     Route::resource('couple', CoupleController::class);

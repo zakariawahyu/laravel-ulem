@@ -3,12 +3,14 @@
 namespace App\Libraries;
 
 class UploadImage {
-    public function upload($caption) {
+    public function upload($caption, $field = null) {
+        $file       = '';
         $request    = request();
-        $file       = request()->file('image');
+        $fieldName  = isset($field) ? $field : 'image';
+        $file       = $request->file($fieldName);
         $imageName  = $caption.".".$file->getClientOriginalExtension();
 
-        $request->image->move(public_path('images'), $imageName);
+        $request->$fieldName->move(public_path('images'), $imageName);
 
         return $imageName;
     }
