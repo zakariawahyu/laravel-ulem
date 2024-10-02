@@ -22,6 +22,10 @@ Route::prefix('mimin')->middleware([])->group(function () {
     Route::controller(ConfigurationController::class)->prefix('configuration')->name('configuration.')->group(function () {
         Route::get('/meta', 'meta')->name('meta');
         Route::post('/meta', 'saveMeta')->name('meta.save');
+        Route::get('/cover', 'cover')->name('cover');
+        Route::post('/cover', 'saveCover')->name('cover.save');
+        Route::get('/event', 'event')->name('event');
+        Route::post('/event', 'saveEvent')->name('event.save');
     });
 
     Route::resource('couple', CoupleController::class);

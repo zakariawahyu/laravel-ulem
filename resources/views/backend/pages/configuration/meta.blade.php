@@ -29,14 +29,14 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Keywords <i class="required">*</i></label>
-                        <input type="text" name="keywords" class="form-control {{ ($errors->any() && $errors->has('keywords')) ? 'is-invalid' : '' }}" placeholder="Insert Keywords" value="{{ old('keywords', isset($meta->custom_data['keywords']) ? $meta->custom_data['keywords'] : '') }}" />
+                        <input type="text" name="keywords" class="form-control {{ ($errors->any() && $errors->has('keywords')) ? 'is-invalid' : '' }}" placeholder="Insert Keywords" value="{{ old('keywords', isset($meta->custom_data->keywords) ? $meta->custom_data->keywords : '') }}" />
                         @if ($errors->any() && $errors->has('keywords'))
                             <div class="invalid-feedback">{{ $errors->first('keywords') }}</div>
                         @endif
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Author <i class="required">*</i></label>
-                        <input type="text" name="author" class="form-control {{ ($errors->any() && $errors->has('author')) ? 'is-invalid' : '' }}" placeholder="Insert Author" value="{{ old('author', isset($meta->custom_data['author']) ? $meta->custom_data['author'] : '') }}" />
+                        <input type="text" name="author" class="form-control {{ ($errors->any() && $errors->has('author')) ? 'is-invalid' : '' }}" placeholder="Insert Author" value="{{ old('author', isset($meta->custom_data->author) ? $meta->custom_data->author : '') }}" />
                         @if ($errors->any() && $errors->has('author'))
                             <div class="invalid-feedback">{{ $errors->first('author') }}</div>
                         @endif
@@ -52,7 +52,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <img class="image-output" id="icon_output" name="icon_output" src="{{ asset('images/'.(isset($meta->custom_data['icon']) ? $meta->custom_data['icon'] : '')) }}" alt="Image Output">
+                        <img class="image-output" id="icon_output" name="icon_output" src="{{ asset('images/'.(isset($meta->custom_data->icon) ? $meta->custom_data->icon : '')) }}" alt="Image Output">
                       </div>
                     <div class="mb-3">
                         <label class="form-label">Upload Icon <i class="required">*</i></label>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CoverRequest;
+use App\Http\Requests\EventRequest;
 use App\Http\Requests\MetaRequest;
 use App\Libraries\UploadImage;
 use App\Models\Configuration;
@@ -62,5 +64,94 @@ class ConfigurationController extends Controller
         }
 
         return redirect()->route('configuration.meta')->with('success', 'Successfuly configured meta');
+    }
+
+    public function cover() {
+        $cover = Configuration::where('type', 'cover')->first();
+        
+        return view('backend.pages.configuration.cover', compact('cover'));
+    }
+
+    public function saveCover(CoverRequest $request) {
+        $data = $request->validated();
+        $imageName = '';
+
+        $caption = Str::slug($data['title']);
+
+        if ($request->hasFile('image')) {
+            $imageName = (new UploadImage)->upload('cover-'.$caption);
+        }
+        
+        $datas = [
+            'type' => 'cover',
+            'title' => $data['title'],
+            'description' => $data['description'],
+        ];
+
+        $cover = Configuration::where('type', 'cover')->first();
+
+        if (empty($cover)) {
+            $merge = [
+                'image' => $imageName
+            ];
+            
+            Configuration::create(array_merge($datas, $merge));
+        } else {
+            $config = Configuration::where('id', $cover['id'])->first();
+            $image = !empty($imageName) ? $imageName : $config->image;
+
+            $merge = [
+                'image' => $image,
+            ];
+
+            $config->update(array_merge($datas, $merge));
+        }
+
+        return redirect()->route('configuration.cover')->with('success', 'Successfuly configured cover');
+    }
+
+    public function event() {
+        $event = Configuration::where('type', 'event')->first();
+        
+        return view('backend.pages.configuration.event', compact('event'));
+    }
+
+    public function saveEvent(EventRequest $request) {
+        $data = $request->validated();
+        $imageName = '';
+
+        $caption = Str::slug($data['title']);
+
+        if ($request->hasFile('image')) {
+            $imageName = (new UploadImage)->upload('event-'.$caption);
+        }
+        
+        $datas = [
+            'type' => 'event',
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'custom_data->date' => $data['date']
+        ];
+
+        $event = Configuration::where('type', 'event')->first();
+
+        if (empty($event)) {
+            $merge = [
+                'image' => $imageName
+            ];
+            
+            Configuration::create(array_merge($datas, $merge));
+        } else {
+            $config = Configuration::where('id', $event['id'])->first();
+            $image = !empty($imageName) ? $imageName : $config->image;
+
+            $merge = [
+                'image' => $image,
+            ];
+
+            $config->update(array_merge($datas, $merge));
+        }
+
+        return redirect()->route('configuration.event')->with('success', 'Successfuly configured event');
     }
 }
