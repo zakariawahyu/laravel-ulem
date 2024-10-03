@@ -26,6 +26,10 @@ Route::prefix('mimin')->middleware([])->group(function () {
         Route::post('/cover', 'saveCover')->name('cover.save');
         Route::get('/event', 'event')->name('event');
         Route::post('/event', 'saveEvent')->name('event.save');
+        Route::get('/venue', 'venue')->name('venue');
+        Route::post('/venue', 'saveVenue')->name('venue.save');
+        Route::get('/gift', 'gift')->name('gift');
+        Route::post('/gift', 'saveGift')->name('gift.save');
     });
 
     Route::resource('couple', CoupleController::class);

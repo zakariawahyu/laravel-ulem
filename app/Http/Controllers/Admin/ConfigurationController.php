@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CoverRequest;
 use App\Http\Requests\EventRequest;
+use App\Http\Requests\GiftRequest;
 use App\Http\Requests\MetaRequest;
+use App\Http\Requests\VenueRequest;
 use App\Libraries\UploadImage;
 use App\Models\Configuration;
 use Illuminate\Support\Str;
@@ -153,5 +155,51 @@ class ConfigurationController extends Controller
         }
 
         return redirect()->route('configuration.event')->with('success', 'Successfuly configured event');
+    }
+
+    public function venue() {
+        $venue = Configuration::where('type', 'venue')->first();
+        
+        return view('backend.pages.configuration.venue', compact('venue'));
+    }
+
+    public function saveVenue(VenueRequest $request) {
+        $data = $request->validated();
+        $data['type'] = 'venue';
+        
+        $venue = Configuration::where('type', 'venue')->first();
+
+        if (empty($venue)) { 
+            Configuration::create($data);
+        } else {
+            $config = Configuration::where('id', $venue['id'])->first();
+        
+            $config->update($data);
+        }
+
+        return redirect()->route('configuration.venue')->with('success', 'Successfuly configured venue');
+    }
+
+    public function gift() {
+        $gift = Configuration::where('type', 'gift')->first();
+        
+        return view('backend.pages.configuration.gift', compact('gift'));
+    }
+
+    public function saveGift(GiftRequest $request) {
+        $data = $request->validated();
+        $data['type'] = 'gift';
+        
+        $gift = Configuration::where('type', 'gift')->first();
+
+        if (empty($gift)) { 
+            Configuration::create($data);
+        } else {
+            $config = Configuration::where('id', $gift['id'])->first();
+        
+            $config->update($data);
+        }
+
+        return redirect()->route('configuration.gift')->with('success', 'Successfuly configured gift');
     }
 }
