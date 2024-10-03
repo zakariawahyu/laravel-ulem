@@ -30,6 +30,12 @@ Route::prefix('mimin')->middleware([])->group(function () {
         Route::post('/venue', 'saveVenue')->name('venue.save');
         Route::get('/gift', 'gift')->name('gift');
         Route::post('/gift', 'saveGift')->name('gift.save');
+        Route::get('/wishes', 'wishes')->name('wishes');
+        Route::post('/wishes', 'saveWishes')->name('wishes.save');
+        Route::get('/rsvp', 'rsvp')->name('rsvp');
+        Route::post('/rsvp', 'saveRsvp')->name('rsvp.save');
+        Route::get('/thanks', 'thanks')->name('thanks');
+        Route::post('/thanks', 'saveThanks')->name('thanks.save');
     });
 
     Route::resource('couple', CoupleController::class);

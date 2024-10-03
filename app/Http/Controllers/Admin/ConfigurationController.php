@@ -7,7 +7,10 @@ use App\Http\Requests\CoverRequest;
 use App\Http\Requests\EventRequest;
 use App\Http\Requests\GiftRequest;
 use App\Http\Requests\MetaRequest;
+use App\Http\Requests\RsvpRequest;
+use App\Http\Requests\ThanksRequest;
 use App\Http\Requests\VenueRequest;
+use App\Http\Requests\WishesRequest;
 use App\Libraries\UploadImage;
 use App\Models\Configuration;
 use Illuminate\Support\Str;
@@ -201,5 +204,116 @@ class ConfigurationController extends Controller
         }
 
         return redirect()->route('configuration.gift')->with('success', 'Successfuly configured gift');
+    }
+
+    public function wishes() {
+        $wishes = Configuration::where('type', 'wishes')->first();
+        
+        return view('backend.pages.configuration.wishes', compact('wishes'));
+    }
+
+    public function saveWishes(WishesRequest $request) {
+        $data = $request->validated();
+        $data['type'] = 'wishes';
+        
+        $wishes = Configuration::where('type', 'wishes')->first();
+
+        if (empty($wishes)) { 
+            Configuration::create($data);
+        } else {
+            $config = Configuration::where('id', $wishes['id'])->first();
+        
+            $config->update($data);
+        }
+
+        return redirect()->route('configuration.wishes')->with('success', 'Successfuly configured wishes');
+    }
+
+    public function rsvp() {
+        $rsvp = Configuration::where('type', 'rsvp')->first();
+        
+        return view('backend.pages.configuration.rsvp', compact('rsvp'));
+    }
+
+    public function saveRsvp(RsvpRequest $request) {
+        $data = $request->validated();
+        $imageName = '';
+
+        $caption = Str::slug($data['title']);
+
+        if ($request->hasFile('image')) {
+            $imageName = (new UploadImage)->upload('rsvp-'.$caption);
+        }
+        
+        $datas = [
+            'type' => 'rsvp',
+            'title' => $data['title'],
+            'description' => $data['description'],
+        ];
+
+        $rsvp = Configuration::where('type', 'rsvp')->first();
+
+        if (empty($rsvp)) {
+            $merge = [
+                'image' => $imageName
+            ];
+            
+            Configuration::create(array_merge($datas, $merge));
+        } else {
+            $config = Configuration::where('id', $rsvp['id'])->first();
+            $image = !empty($imageName) ? $imageName : $config->image;
+
+            $merge = [
+                'image' => $image,
+            ];
+
+            $config->update(array_merge($datas, $merge));
+        }
+
+        return redirect()->route('configuration.rsvp')->with('success', 'Successfuly configured rsvp');
+    }
+
+    public function thanks() {
+        $thanks = Configuration::where('type', 'thanks')->first();
+        
+        return view('backend.pages.configuration.thanks', compact('thanks'));
+    }
+
+    public function saveThanks(ThanksRequest $request) {
+        $data = $request->validated();
+        $imageName = '';
+
+        $caption = Str::slug($data['title']);
+
+        if ($request->hasFile('image')) {
+            $imageName = (new UploadImage)->upload('thanks-'.$caption);
+        }
+        
+        $datas = [
+            'type' => 'thanks',
+            'title' => $data['title'],
+            'description' => $data['description'],
+        ];
+
+        $thanks = Configuration::where('type', 'thanks')->first();
+
+        if (empty($thanks)) {
+            $merge = [
+                'image' => $imageName
+            ];
+            
+            Configuration::create(array_merge($datas, $merge));
+        } else {
+            $config = Configuration::where('id', $thanks['id'])->first();
+            $image = !empty($imageName) ? $imageName : $config->image;
+
+            $merge = [
+                'image' => $image,
+            ];
+
+            $config->update(array_merge($datas, $merge));
+        }
+
+        return redirect()->route('configuration.thanks')->with('success', 'Successfuly configured thanks');
     }
 }
