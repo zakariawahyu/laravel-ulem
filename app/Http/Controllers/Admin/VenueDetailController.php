@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\VenueDetailRequest;
 use App\Models\VenueDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class VenueDetailController extends Controller
 {
@@ -34,7 +35,7 @@ class VenueDetailController extends Controller
        
         VenueDetail::create($data);
 
-        return redirect()->route('venue-detail.index')->with('succes', 'Successfuly created venue detail');
+        return redirect()->route('venue-detail.index')->with('success', 'Successfully created venue detail');
     }
 
     /**
@@ -72,7 +73,7 @@ class VenueDetailController extends Controller
         
         $venueDetail->update($data);
         
-        return redirect()->route('venue-detail.index')->with('succes', 'Successfuly updated venue detail');
+        return redirect()->route('venue-detail.index')->with('success', 'Successfully updated venue detail');
     }
 
     /**
@@ -82,6 +83,16 @@ class VenueDetailController extends Controller
     {
         VenueDetail::where('id', $id)->delete();
 
-        return redirect()->route('venue-detail.index')->with('succes', 'Successfuly deleted venue detail');
+        return redirect()->route('venue-detail.index')->with('success', 'Successfully deleted venue detail');
+    }
+
+    /**
+     * Publish data venue details to redis
+    */
+    public function publish() {
+        $venueDetails = VenueDetail::all();
+        Redis::set(config('custom.key_venue_details'), json_encode($venueDetails));
+
+        return redirect()->route('venue-detai.index')->with('success', 'Successfully publish venue details');
     }
 }

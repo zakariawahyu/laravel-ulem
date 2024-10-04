@@ -19,3 +19,12 @@
 
 <!-- Main JS -->
 <script src="{{ asset('assets/backend/js/main.js')}}"></script>
+
+@if (session('success'))
+    <script>
+        Swal.fire({
+            text: "{{ session('success') }}",
+            icon: 'success',
+        });
+    </script>
+@endif

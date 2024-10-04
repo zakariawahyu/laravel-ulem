@@ -36,7 +36,7 @@ class AuthContoller extends Controller
     
                 session(['user_detail' => $userDetail]);
 
-                return redirect(route('couple.index'));
+                return redirect(route('dashboard'));
             } else {
                 return redirect()->back()->with('error-login', 'Password not match!');
             }

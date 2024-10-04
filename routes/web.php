@@ -48,11 +48,17 @@ Route::prefix('mimin')->middleware([Auth::class])->group(function () {
     });
 
     Route::get('/dashboard', [DashboardControler::class, 'index'])->name('dashboard');
-    Route::resource('couple', CoupleController::class);
+    Route::get('/couple/publish', [CoupleController::class, 'publish'])->name('couple.publish');
+    Route::get('/gallery/publish', [GalleryController::class, 'publish'])->name('gallery.publish');
+    Route::get('/venue-detail/publish', [VenueDetailController::class, 'publish'])->name('venue-detail.publish');
+  
     Route::get('/couple/{id}/delete', [CoupleController::class, 'destroy'])->name('couple.delete');
-    Route::resource('gallery', GalleryController::class);
     Route::get('/gallery/{id}/delete', [GalleryController::class, 'destroy'])->name('gallery.delete');
-    Route::resource('venue-detail', VenueDetailController::class);
     Route::get('/venue-detail/{id}/delete', [VenueDetailController::class, 'destroy'])->name('venue-detail.delete');
+
+    Route::resource('couple', CoupleController::class);
+    Route::resource('gallery', GalleryController::class);
+    Route::resource('venue-detail', VenueDetailController::class);
+   
 });
 

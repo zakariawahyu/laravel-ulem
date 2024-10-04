@@ -96,7 +96,7 @@ class ConfigurationController extends Controller
             $config->update(array_merge($datas, $merge));
         }
 
-        return redirect()->route('configuration.meta')->with('success', 'Successfuly configured meta');
+        return redirect()->route('configuration.meta')->with('success', 'Successfully configured meta');
     }
 
     public function cover() {
@@ -140,7 +140,7 @@ class ConfigurationController extends Controller
             $config->update(array_merge($datas, $merge));
         }
 
-        return redirect()->route('configuration.cover')->with('success', 'Successfuly configured cover');
+        return redirect()->route('configuration.cover')->with('success', 'Successfully configured cover');
     }
 
     public function event() {
@@ -185,7 +185,7 @@ class ConfigurationController extends Controller
             $config->update(array_merge($datas, $merge));
         }
 
-        return redirect()->route('configuration.event')->with('success', 'Successfuly configured event');
+        return redirect()->route('configuration.event')->with('success', 'Successfully configured event');
     }
 
     public function venue() {
@@ -208,7 +208,7 @@ class ConfigurationController extends Controller
             $config->update($data);
         }
 
-        return redirect()->route('configuration.venue')->with('success', 'Successfuly configured venue');
+        return redirect()->route('configuration.venue')->with('success', 'Successfully configured venue');
     }
 
     public function gift() {
@@ -231,7 +231,7 @@ class ConfigurationController extends Controller
             $config->update($data);
         }
 
-        return redirect()->route('configuration.gift')->with('success', 'Successfuly configured gift');
+        return redirect()->route('configuration.gift')->with('success', 'Successfully configured gift');
     }
 
     public function wishes() {
@@ -254,7 +254,7 @@ class ConfigurationController extends Controller
             $config->update($data);
         }
 
-        return redirect()->route('configuration.wishes')->with('success', 'Successfuly configured wishes');
+        return redirect()->route('configuration.wishes')->with('success', 'Successfully configured wishes');
     }
 
     public function rsvp() {
@@ -298,7 +298,7 @@ class ConfigurationController extends Controller
             $config->update(array_merge($datas, $merge));
         }
 
-        return redirect()->route('configuration.rsvp')->with('success', 'Successfuly configured rsvp');
+        return redirect()->route('configuration.rsvp')->with('success', 'Successfully configured rsvp');
     }
 
     public function thanks() {
@@ -342,6 +342,6 @@ class ConfigurationController extends Controller
             $config->update(array_merge($datas, $merge));
         }
 
-        return redirect()->route('configuration.thanks')->with('success', 'Successfuly configured thanks');
+        return redirect()->route('configuration.thanks')->with('success', 'Successfully configured thanks');
     }
 }

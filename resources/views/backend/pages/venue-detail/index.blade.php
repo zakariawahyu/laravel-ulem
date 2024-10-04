@@ -6,6 +6,7 @@
     </h4>
     <div class="dt-action-buttons text-end mb-2">
         <div class="dt-buttons">
+            <a class="btn btn-warning" type="button" href="{{ route('venue-detail.publish') }}"><span><i class="bx bx-paper-plane me-sm-2"></i> <span class="d-none d-sm-inline-block">Publish</span></span></a>
             <a class="btn btn-info" type="button" href="{{ route('venue-detail.create') }}"><span><i class="bx bx-plus me-sm-2"></i> <span class="d-none d-sm-inline-block">Add New Record</span></span></a>
         </div>
     </div>

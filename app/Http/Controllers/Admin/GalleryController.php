@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\GalleryRequest;
 use App\Libraries\UploadImage;
 use App\Models\Gallery;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Str;
 
 class GalleryController extends Controller
@@ -43,7 +44,7 @@ class GalleryController extends Controller
 
         Gallery::create($data);
 
-        return redirect()->route('gallery.index')->with('succes', 'Successfuly created gallery');
+        return redirect()->route('gallery.index')->with('success', 'Successfully created gallery');
     }
 
     /**
@@ -90,7 +91,7 @@ class GalleryController extends Controller
 
         $gallery->update($data);
         
-        return redirect()->route('gallery.index')->with('succes', 'Successfuly updated gallery');
+        return redirect()->route('gallery.index')->with('success', 'Successfully updated gallery');
     }
 
     /**
@@ -100,6 +101,16 @@ class GalleryController extends Controller
     {
         Gallery::where('id', $id)->delete();
 
-        return redirect()->route('gallery.index')->with('succes', 'Successfuly deleted gallery');
+        return redirect()->route('gallery.index')->with('success', 'Successfully deleted gallery');
+    }
+
+    /**
+     * Publish data gallery to redis
+     */
+    public function publish() {
+        $galleries = Gallery::all();
+        Redis::set(config('custom.key_galleries'), json_encode($galleries));
+
+        return redirect()->route('gallery.index')->with('success', 'Successfully publish galleries');
     }
 }

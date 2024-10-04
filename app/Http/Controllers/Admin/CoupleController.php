@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CoupleRequest;
 use App\Libraries\UploadImage;
 use App\Models\Couple;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Str;
 
 class CoupleController extends Controller
@@ -45,7 +46,7 @@ class CoupleController extends Controller
 
         Couple::create($data);
 
-        return redirect()->route('couple.index')->with('succes', 'Successfuly created couple');
+        return redirect()->route('couple.index')->with('success', 'Successfully created couple');
     }
 
     /**
@@ -94,7 +95,7 @@ class CoupleController extends Controller
 
         $couple->update($data);
         
-        return redirect()->route('couple.index')->with('succes', 'Successfuly updated couple');
+        return redirect()->route('couple.index')->with('success', 'Successfully updated couple');
     }
 
     /**
@@ -104,6 +105,16 @@ class CoupleController extends Controller
     {
         Couple::where('id', $id)->delete();
 
-        return redirect()->route('couple.index')->with('succes', 'Successfuly deleted couple');
+        return redirect()->route('couple.index')->with('success', 'Successfully deleted couple');
+    }
+
+    /**
+     * Publish data couple to redis
+     */
+    public function publish() {
+        $couples = Couple::all();
+        Redis::set(config('custom.key_couples'), json_encode($couples));
+
+        return redirect()->route('couple.index')->with('success', 'Successfully publish couples');
     }
 }
