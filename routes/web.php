@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AuthContoller;
 use App\Http\Controllers\Admin\ConfigurationController;
 use App\Http\Controllers\Admin\CoupleController;
+use App\Http\Controllers\Admin\DashboardControler;
 use App\Http\Controllers\Admin\DatatablesController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\VenueDetailController;
@@ -46,6 +47,7 @@ Route::prefix('mimin')->middleware([Auth::class])->group(function () {
         Route::post('/thanks', 'saveThanks')->name('thanks.save');
     });
 
+    Route::get('/dashboard', [DashboardControler::class, 'index'])->name('dashboard');
     Route::resource('couple', CoupleController::class);
     Route::get('/couple/{id}/delete', [CoupleController::class, 'destroy'])->name('couple.delete');
     Route::resource('gallery', GalleryController::class);

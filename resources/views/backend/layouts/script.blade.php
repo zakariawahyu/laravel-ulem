@@ -2,9 +2,6 @@
 <script src="{{ asset('assets/backend/libs/popper/popper.js')}}"></script>
 <script src="{{ asset('assets/backend/js/bootstrap.js')}}"></script>
 <script src="{{ asset('assets/backend/libs/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
-
-<script src="{{ asset('assets/backend/libs/hammer/hammer.js')}}"></script>
-<script src="{{ asset('assets/backend/libs/i18n/i18n.js')}}"></script>
 <script src="{{ asset('assets/backend/libs/typeahead-js/typeahead.js')}}"></script>
 
 <script src="{{ asset('assets/backend/js/menu.js')}}"></script>

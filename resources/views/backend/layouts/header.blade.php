@@ -2,13 +2,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard - Template</title>
+    <title>Wedding CMS - ZakariaYunanda</title>
 
-    <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
-    <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5" />
+    <meta name="description" content="Wedding CMS configuration for digital invitation" />
+    <meta name="keywords" content="wedding, cms, digital invitation, configuration" />
+    <meta name="googlebot" content="noindex">
+    <meta name="robots" content="noindex, nofollow" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/backend/img/favicon.ico') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
@@ -34,18 +36,9 @@
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/pickr/pickr-themes.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/sweetalert2/sweetalert2.css')}}" />
 
-
     <!-- Helpers -->
     <script src="{{ asset('assets/backend/js/helpers.js')}}"></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('assets/backend/js/config.js')}}"></script>
-
-    <!-- Custom notification for demo -->
-    <!-- beautify ignore:end -->
-
     <style>
         .required {
             color: red
