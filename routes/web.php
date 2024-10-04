@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CoupleController;
 use App\Http\Controllers\Admin\DatatablesController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\VenueDetailController;
+use App\Http\Middleware\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,7 +13,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('mimin')->middleware([])->group(function () {
+Route::get('/mimin-login', [AuthContoller::class, 'index'])->name('login');
+Route::post('/login', [AuthContoller::class, 'login'])->name('do-login');
+
+Route::prefix('mimin')->middleware([Auth::class])->group(function () {
     Route::controller(DatatablesController::class)->prefix('datatable')->name('datatable.')->group(function () {
         Route::get('/couple', 'couple')->name('couple');
         Route::get('/gallery', 'gallery')->name('gallery');
