@@ -13,10 +13,38 @@ use App\Http\Requests\VenueRequest;
 use App\Http\Requests\WishesRequest;
 use App\Libraries\UploadImage;
 use App\Models\Configuration;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Str;
 
 class ConfigurationController extends Controller
 {
+    public function index() {
+        $configs = config('custom.configuration');
+        $configData = Configuration::all();
+
+        $configData = collect($configData)->map(function($config) {
+            return [$config->type => $config->is_active];
+        })->collapse()->toArray();
+
+        return view('backend.pages.configuration.index', compact('configs', 'configData'));
+    }
+
+    public function publish(Request $request) {
+        $field = $request->field;
+        $is_active = $request->checked;
+
+        $config = Configuration::where('type', $field)->first();
+        if (empty($config)) {
+            return response()->json("Error configuration's empty", 404);
+        } else {
+            $config->update(['is_active' => filter_var($is_active, FILTER_VALIDATE_BOOLEAN)]);
+            Redis::set(config('custom.key_config').$field, json_encode(collect($config)->except(['id', 'created_at', 'updated_at'])));
+        }
+        $published = $is_active == "true" ? 'publish' : 'unplublish';
+        return response()->json('Success '.$published.' configuration');
+    }
+
     public function meta() {
         $meta = Configuration::where('type', 'meta')->first();
         

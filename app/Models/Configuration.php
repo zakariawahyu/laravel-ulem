@@ -10,7 +10,7 @@ class Configuration extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['type', 'title', 'description', 'image', 'custom_data->keywords', 'custom_data->author', 'custom_data->icon', 'custom_data->date'];
+    protected $fillable = ['type', 'title', 'description', 'image', 'is_active', 'custom_data->keywords', 'custom_data->author', 'custom_data->icon', 'custom_data->date'];
 
     /**
      * Get the attributes that should be cast.
@@ -23,4 +23,13 @@ class Configuration extends Model
             'custom_data' => AsArrayObject::class,
         ];
     }
+
+    /**
+     * The model's default values for attributes.
+     *
+     * @var array
+    */
+    protected $attributes = [
+        'is_active' => false,
+    ];
 }

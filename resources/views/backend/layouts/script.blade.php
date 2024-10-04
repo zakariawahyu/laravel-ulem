@@ -18,6 +18,7 @@
 
 <!-- Vendors JS -->
 <script src="{{  asset('assets/backend/libs/flatpickr/flatpickr.js') }}"></script>
+<script src="{{ asset('assets/backend/libs/sweetalert2/sweetalert2.js')}}"></script>
 
 <!-- Main JS -->
 <script src="{{ asset('assets/backend/js/main.js')}}"></script>

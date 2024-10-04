@@ -32,11 +32,9 @@ class AuthContoller extends Controller
                 $userDetail = [
                     'id' => $admin['id'],
                     'username' => $admin['username'],
-                    'name' => $admin['name']
                 ];
     
                 session(['user_detail' => $userDetail]);
-                Auth::guard('web')->loginUsingId($userDetail['id']);
 
                 return redirect(route('couple.index'));
             } else {
@@ -54,9 +52,7 @@ class AuthContoller extends Controller
      * @return  void
      */
     public function logout(Request $request) 
-    {
-        Auth::guard('web')->logout();
-        
+    {   
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 

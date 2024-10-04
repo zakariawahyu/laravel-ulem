@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/flatpickr/flatpickr.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/backend/libs/pickr/pickr-themes.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/backend/libs/sweetalert2/sweetalert2.css')}}" />
 
 
     <!-- Helpers -->

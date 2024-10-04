@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthContoller;
 use App\Http\Controllers\Admin\ConfigurationController;
 use App\Http\Controllers\Admin\CoupleController;
 use App\Http\Controllers\Admin\DatatablesController;
@@ -15,6 +16,7 @@ Route::get('/', function () {
 
 Route::get('/mimin-login', [AuthContoller::class, 'index'])->name('login');
 Route::post('/login', [AuthContoller::class, 'login'])->name('do-login');
+Route::get('/logout', [AuthContoller::class, 'logout'])->name('logout');
 
 Route::prefix('mimin')->middleware([Auth::class])->group(function () {
     Route::controller(DatatablesController::class)->prefix('datatable')->name('datatable.')->group(function () {
@@ -24,6 +26,8 @@ Route::prefix('mimin')->middleware([Auth::class])->group(function () {
     });
 
     Route::controller(ConfigurationController::class)->prefix('configuration')->name('configuration.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/publish', 'publish')->name('publish');
         Route::get('/meta', 'meta')->name('meta');
         Route::post('/meta', 'saveMeta')->name('meta.save');
         Route::get('/cover', 'cover')->name('cover');
