@@ -8,6 +8,7 @@ use App\Http\Requests\EventRequest;
 use App\Http\Requests\GiftRequest;
 use App\Http\Requests\MetaRequest;
 use App\Http\Requests\RsvpRequest;
+use App\Http\Requests\StoryRequest;
 use App\Http\Requests\ThanksRequest;
 use App\Http\Requests\VenueRequest;
 use App\Http\Requests\WishesRequest;
@@ -107,37 +108,22 @@ class ConfigurationController extends Controller
 
     public function saveCover(CoverRequest $request) {
         $data = $request->validated();
-        $imageName = '';
-
-        $caption = Str::slug($data['title']);
-
-        if ($request->hasFile('image')) {
-            $imageName = (new UploadImage)->upload('cover-'.$caption);
-        }
-        
+    
         $datas = [
             'type' => 'cover',
             'title' => $data['title'],
             'description' => $data['description'],
+            'custom_data->name' => $data['name'],
         ];
 
         $cover = Configuration::where('type', 'cover')->first();
 
         if (empty($cover)) {
-            $merge = [
-                'image' => $imageName
-            ];
-            
-            Configuration::create(array_merge($datas, $merge));
+            Configuration::create($datas);
         } else {
             $config = Configuration::where('id', $cover['id'])->first();
-            $image = !empty($imageName) ? $imageName : $config->image;
 
-            $merge = [
-                'image' => $image,
-            ];
-
-            $config->update(array_merge($datas, $merge));
+            $config->update($datas);
         }
 
         return redirect()->route('configuration.cover')->with('success', 'Successfully configured cover');
@@ -186,6 +172,50 @@ class ConfigurationController extends Controller
         }
 
         return redirect()->route('configuration.event')->with('success', 'Successfully configured event');
+    }
+
+    public function story() {
+        $story = Configuration::where('type', 'story')->first();
+        
+        return view('backend.pages.configuration.story', compact('story'));
+    }
+
+    public function saveStory(StoryRequest $request) {
+        $data = $request->validated();
+        $imageName = '';
+
+        $caption = Str::slug($data['title']);
+
+        if ($request->hasFile('image')) {
+            $imageName = (new UploadImage)->upload('story-'.$caption);
+        }
+        
+        $datas = [
+            'type' => 'story',
+            'title' => $data['title'],
+            'description' => $data['description'],
+        ];
+
+        $story = Configuration::where('type', 'story')->first();
+
+        if (empty($story)) {
+            $merge = [
+                'image' => $imageName
+            ];
+            
+            Configuration::create(array_merge($datas, $merge));
+        } else {
+            $config = Configuration::where('id', $story['id'])->first();
+            $image = !empty($imageName) ? $imageName : $config->image;
+
+            $merge = [
+                'image' => $image,
+            ];
+
+            $config->update(array_merge($datas, $merge));
+        }
+
+        return redirect()->route('configuration.story')->with('success', 'Successfully configured story');
     }
 
     public function venue() {

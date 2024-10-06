@@ -24,6 +24,7 @@
 @endsection
 
 @section('viewJs')
+    <script src="{{ asset('assets/backend/libs/block-ui/block-ui.js') }}"></script>
     <script>
         function publishConfig(data) {
             let field = data.value;
@@ -35,6 +36,19 @@
                     "field": field,
                     "checked": checked,
                     "_token": "{{ csrf_token() }}",
+                },
+                beforeSend: function () {
+                    $.blockUI({
+                        message: '<div class="spinner-border text-white" role="status"></div>',
+                        timeout: 1e3,
+                        css: {
+                            backgroundColor: "transparent",
+                            border: "0"
+                        },
+                        overlayCSS: {
+                            opacity: .5
+                        }
+                    })
                 },
                 success:function(response){
                     sweetAlert('success', response)
@@ -48,8 +62,7 @@
         function sweetAlert(icon, response){
             Swal.fire({
                 text: response,
-                icon: icon,
-                timer: 4500
+                icon: icon
             }).then(() => {
                 location.reload();
             });

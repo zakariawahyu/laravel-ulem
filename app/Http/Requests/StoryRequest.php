@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CoverRequest extends FormRequest
+class StoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,8 +23,8 @@ class CoverRequest extends FormRequest
     {
         return [
             'title'         => 'required|max:255',
-            'name'         => 'required|max:255',
-            'description'   => 'required|max:255'
+            'description'   => 'required|max:255',
+            'image'         => 'sometimes|required|image|mimes:jpg,jpeg,png',
         ];
     }
 }

@@ -9,6 +9,7 @@ return [
         'meta'      => 'Meta',
         'cover'     => 'Cover',
         'event'     => 'Event',
+        'story'     => 'Story',
         'venue'     => 'Venue',
         'gift'      => 'Gift',
         'rsvp'      => 'RSVP',

@@ -33,6 +33,8 @@ Route::prefix('mimin')->middleware([Auth::class])->group(function () {
         Route::post('/cover', 'saveCover')->name('cover.save');
         Route::get('/event', 'event')->name('event');
         Route::post('/event', 'saveEvent')->name('event.save');
+        Route::get('/story', 'story')->name('story');
+        Route::post('/story', 'saveStory')->name('story.save');
         Route::get('/venue', 'venue')->name('venue');
         Route::post('/venue', 'saveVenue')->name('venue.save');
         Route::get('/gift', 'gift')->name('gift');
