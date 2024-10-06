@@ -2670,7 +2670,7 @@ img[alt=flower] {
 
 .rsvp-section {
   position: relative;
-  padding: 0 0 5rem;
+  padding: 2rem 0 2em;
 }
 @media (max-width: 767px) {
   .rsvp-section {

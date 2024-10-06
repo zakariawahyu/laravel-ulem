@@ -133,37 +133,6 @@ if (giftWrap) {
 	});
 }
 
-const getLoadedIframe = (ifr) => {
-	return new Promise((resolve, reject) => {
-		ifr.onload = () => resolve("maps loaded!")
-		ifr.onerror = () => reject("Iframe Load Failed: Please Check Again Your URL!")
-		ifr.src = ifr.dataset.src
-	})
-}
-
-// Modal Event Handler
-const mapModal = document.querySelectorAll(".modal");
-
-mapModal.forEach(modal => {
-	modal.addEventListener("shown.bs.modal", (e) => {
-		const loader = e.target.querySelector(".loader-wrapper-modal")
-		const iframe = e.target.querySelector("iframe")
-
-		getLoadedIframe(iframe).then(() => {
-			loader.classList.add("loaded")
-		}).catch(err => {
-			console.log(err)
-		})
-	})
-
-	modal.addEventListener("hidden.bs.modal", (e) => {
-		const iframe = e.target.querySelector("iframe")
-		const loader = e.target.querySelector(".loader-wrapper-modal")
-		iframe.src = "";
-		loader.classList.remove("loaded");
-	})
-})
-
 if (document.querySelector("#zoom-gallery-default")) {
 	$("#zoom-gallery-default").magnificPopup({
 		delegate: "li a",
@@ -175,7 +144,6 @@ if (document.querySelector("#zoom-gallery-default")) {
 		},
 	});
 }
-
 
 if (document.querySelectorAll("[data-anim]")) {
 	document.querySelectorAll("[data-anim]").forEach(ada => {

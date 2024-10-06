@@ -44,20 +44,6 @@
     <meta name="google" content="notranslate" />
     <meta name="thumbnailUrl" content="" itemprop="thumbnailUrl"/>
 
-    <script>
-        const APP_URL = "http://localhost/";
-    </script>
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "headline": "Welcome to the Wedding",
-            "url": "https://",
-            "image": "",
-            "thumbnailUrl": ""
-        }
-    </script>
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
 

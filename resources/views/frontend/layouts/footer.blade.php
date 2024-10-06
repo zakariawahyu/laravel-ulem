@@ -19,5 +19,5 @@
             font-weight: 600;
         }
     </style>
-    <p class="footer-text">Copyright ©2024 Created with ❤️ by <a href="http://localhost/" target="_blank">localhost</a></p>
+    <p class="footer-text">Copyright ©{{ date('Y') }} ZakariaYunanda - Made with ❤️</p>
 </footer>

@@ -7,13 +7,11 @@ use App\Http\Controllers\Admin\DashboardControler;
 use App\Http\Controllers\Admin\DatatablesController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\VenueDetailController;
+use App\Http\Controllers\HomeController;
 use App\Http\Middleware\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/mimin-login', [AuthContoller::class, 'index'])->name('login');
 Route::post('/login', [AuthContoller::class, 'login'])->name('do-login');

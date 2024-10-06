@@ -1,10 +1,3 @@
-<!-- script add robot field -->
-<script>
-    var stepper_id = 12414;
-    var guest_type = "regular";
-    var invitation_lang = "id";
-</script>
-<script src="{{ asset('assets/frontend/js/add_robot_field.js')}}"></script>
 <!-- script libraries -->
 <script src="{{ asset('assets/frontend/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js')}}" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{ asset('assets/frontend/js/jquery-3.6.0.min.js')}}" crossorigin="anonymous"></script>

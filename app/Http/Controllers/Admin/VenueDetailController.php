@@ -93,6 +93,6 @@ class VenueDetailController extends Controller
         $venueDetails = VenueDetail::all();
         Redis::set(config('custom.key_venue_details'), json_encode($venueDetails));
 
-        return redirect()->route('venue-detai.index')->with('success', 'Successfully publish venue details');
+        return redirect()->route('venue-detail.index')->with('success', 'Successfully publish venue details');
     }
 }

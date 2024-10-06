@@ -18,6 +18,10 @@ class AuthContoller extends Controller
      */
     public function index() 
     {
+        if (session('user_detail')) {
+            return redirect()->route('dashboard');
+        }
+
         return view('backend.pages.auth.index');
     }
 
