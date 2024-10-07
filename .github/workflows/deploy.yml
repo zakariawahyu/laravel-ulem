@@ -34,7 +34,7 @@ jobs:
         run: |
           php -v
           composer -V
-          cp .env.development .env
+          cp .env.example .env
           composer install
         env:
           COMPOSER_CACHE_DIR: /var/www/caches/composer_cache
@@ -67,7 +67,7 @@ jobs:
           context: .
           file: ./.github/deploy/production/Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/myapp:latest
+          tags: ghcr.io/${{ github.repository_owner }}/laravel-ulem:latest
 
       - name: Deploy to stage
         uses: appleboy/ssh-action@master
@@ -80,7 +80,7 @@ jobs:
             cd ${{ secrets.PROJECT_PATH }}
             docker compose pull
             docker compose down
-            docker volume rm myapp_app-data
+            docker volume rm laravel-ulem_app-data
             docker compose up -d
             sleep 10
             bash entrypoint.sh
