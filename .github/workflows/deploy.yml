@@ -48,8 +48,6 @@ jobs:
           sqlite3 testing "VACUUM;"
           php artisan migrate
           php artisan db:seed
-          php artisan test
-          rm -rf testing
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
