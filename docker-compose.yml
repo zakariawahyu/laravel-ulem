@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/${{ github.repository_owner }}/laravel-ulem:latest
+    image: ghcr.io/zakariawahyu/laravel-ulem:latest
     container_name: laravel-ulem
     restart: unless-stopped
     working_dir: /var/www/
