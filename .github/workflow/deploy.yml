@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - master
-    types:
-      - closed
-
+    
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
