@@ -1,7 +1,7 @@
 name: Build & Deploy to Stage
 
 on:
-  pull_request:
+  push:
     branches:
       - master
     types:
@@ -9,7 +9,6 @@ on:
 
 jobs:
   build-deploy:
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'master'
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental }}
     strategy:
