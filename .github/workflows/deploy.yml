@@ -47,7 +47,7 @@ jobs:
           php artisan key:generate
           sqlite3 testing "VACUUM;"
           php artisan migrate
-          php artisan module:seed
+          php artisan db:seed
           php artisan test
           rm -rf testing
 
