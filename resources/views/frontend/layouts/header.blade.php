@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Virtual Wedding, Digital Invitation, Wedding Invitation, Marvelous Wedding, Unforgettable Wedding" />
     <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 
     <meta name="title" content="Welcome to the Wedding" />
     <meta name="description" content="Digital Invitation" />
