@@ -72,6 +72,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd ${{ secrets.PROJECT_PATH }}
+            git pull origin master
             docker compose pull
             docker compose down
             docker volume rm laravel-ulem_app-data
