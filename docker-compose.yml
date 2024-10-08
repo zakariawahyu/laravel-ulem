@@ -1,11 +1,11 @@
 services:
   app:
-    image: ghcr.io/zakariawahyu/laravel-ulem:latest
+    image: ghcr.io/zakariawahyu/php83-fpm:latest
     container_name: laravel-ulem
     restart: unless-stopped
     working_dir: /var/www/
     volumes:
-      - ./.env:/var/www/.env
+      - ./:/var/www/
       - app-data:/var/www
       - ./docker/storage_app:/var/www/storage/app
       - ./docker/php/production.ini:/usr/local/etc/php/conf.d/custom-php.ini
