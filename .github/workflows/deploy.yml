@@ -44,10 +44,6 @@ jobs:
           php -v
           php artisan --version
           php artisan about
-          php artisan key:generate
-          sqlite3 testing "VACUUM;"
-          php artisan migrate
-          php artisan db:seed
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
