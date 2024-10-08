@@ -17,40 +17,43 @@ services:
       - laravel
 
   db:
-    image: mysql/mysql-server:8.0
+    image: mysql:8.4
     container_name: laravel-db
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_USER: ${DB_USERNAME}
+    ports:
+      - '3306:3306'
     volumes:
       - ./docker/mysql:/docker-entrypoint-initdb.d
     networks:
       - laravel
-      
+
   redis:
-    image: redis:alpine
+    image: redis:7.4.1-alpine
     container_name: laravel-redis
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "6379:6379"
     volumes:
         - 'laravel-redis:/data'
-    restart: unless-stopped
     networks:
         - laravel
-  
+
   nginx:
-    image: nginx:alpine
+    image: nginx:1.27.2-alpine
     container_name: laravel-nginx
     restart: unless-stopped
+    tty: true
     ports:
-      - 443:80
+      - "80:80"
     volumes:
       - app-data:/var/www
       - ./docker/storage_app:/var/www/storage/app
       - ./docker/nginx:/etc/nginx/conf.d/
       - ./docker/nginx/logs:/var/log/nginx/
-    
     networks:
       - laravel
 
