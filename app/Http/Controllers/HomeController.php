@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Redis;
 class HomeController extends Controller
 {
     public function index(Request $request) {
+        $cover = self::getRedis(config('custom.key_config').'cover');
         $event = self::getRedis(config('custom.key_config').'event');
+        $story = self::getRedis(config('custom.key_config').'story');
         $venue = self::getRedis(config('custom.key_config').'venue');
         $rsvp = self::getRedis(config('custom.key_config').'rsvp');
         $wishes = self::getRedis(config('custom.key_config').'wishes');
@@ -18,7 +20,9 @@ class HomeController extends Controller
         $galleries = self::getRedis(config('custom.key_galleries'));
 
         return view('frontend.home', compact(
+            'cover',
             'event',
+            'story',
             'venue',
             'rsvp',
             'wishes',
