@@ -10,10 +10,8 @@ class UploadImage {
         $file       = $request->file($fieldName);
         $imageName  = $caption.".".$file->getClientOriginalExtension();
 
-        $path = $file->storeAs(
-            'images', $imageName, 'public'
-        );
+        $request->$fieldName->move(public_path('images'), $imageName);
 
-        return $path;
+        return $imageName;
     }
 }

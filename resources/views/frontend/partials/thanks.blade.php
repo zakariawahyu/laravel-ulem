@@ -104,7 +104,7 @@
                         </div>
                         <div class="image-wrapper" style="aspect-ratio: 4 / 5;">
                             <div class="image-element">
-                                <img data-src="{{ asset('storage/'.$thanks->image) }}" title="imagae {{ $thanks->title }} zakaria yunanda" alt="imagae {{ $thanks->title }} zakaria yunanda" class="thank-background lazyload" />
+                                <img data-src="{{ asset('images/'.$thanks->image) }}" title="imagae {{ $thanks->title }} zakaria yunanda" alt="imagae {{ $thanks->title }} zakaria yunanda" class="thank-background lazyload" />
                             </div>
                         </div>
                     </div>

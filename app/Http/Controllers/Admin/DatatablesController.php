@@ -60,7 +60,7 @@ class DatatablesController extends Controller
             ->editColumn('image', function($gallery){
                 return '
                 <div class="text-center">
-                    <img class="img-fluid rounded" src="'.asset('storage/'.$gallery->image).'" width="250px" height="auto">
+                    <img class="img-fluid rounded" src="'.asset('images/'.$gallery->image).'" width="250px" height="auto">
                 </div>';
             })
             ->addIndexColumn()

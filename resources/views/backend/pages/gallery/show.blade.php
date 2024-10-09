@@ -20,7 +20,7 @@
       <div class="card-body">
         <div class="user-avatar-section">
           <div class="d-flex align-items-center flex-column">
-            <img class="img-fluid rounded my-4" src="{{ asset('storage/'.$gallery->image) }}" />
+            <img class="img-fluid rounded my-4" src="{{ asset('images/'.$gallery->image) }}" />
             <div class="user-info text-center">
               <h4 class="mb-2">{{ $gallery->image_caption }}</h4>
             </div>

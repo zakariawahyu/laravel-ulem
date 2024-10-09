@@ -67,7 +67,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <img class="image-output" id="image_output" name="image_output" src="{{ asset('storage/'.$couple->image) }}" alt="Image Output">
+                        <img class="image-output" id="image_output" name="image_output" src="{{ asset('images/'.$couple->image) }}" alt="Image Output">
                       </div>
                     <div class="mb-3">
                         <label class="form-label">Upload Image <i class="required">*</i></label>
