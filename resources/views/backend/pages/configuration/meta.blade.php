@@ -42,7 +42,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <img class="image-output" id="image_output" name="image_output" src="{{ asset('images/'.(isset($meta->image) ? $meta->image : '')) }}" alt="Image Output">
+                        <img class="image-output" id="image_output" name="image_output" src="{{ asset('storage/'.(isset($meta->image) ? $meta->image : '')) }}" alt="Image Output">
                       </div>
                     <div class="mb-3">
                         <label class="form-label">Upload Image <i class="required">*</i></label>
@@ -52,7 +52,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <img class="image-output" id="icon_output" name="icon_output" src="{{ asset('images/'.(isset($meta->custom_data->icon) ? $meta->custom_data->icon : '')) }}" alt="Image Output">
+                        <img class="image-output" id="icon_output" name="icon_output" src="{{ asset('storage/'.(isset($meta->custom_data->icon) ? $meta->custom_data->icon : '')) }}" alt="Image Output">
                       </div>
                     <div class="mb-3">
                         <label class="form-label">Upload Icon <i class="required">*</i></label>

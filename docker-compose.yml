@@ -7,7 +7,7 @@ services:
     volumes:
       - ./.env:/var/www/.env
       - app-data:/var/www
-      - ./docker/images:/var/www/public/images
+      - ./docker/storage_app:/var/www/storage/app
       - ./docker/php/production.ini:/usr/local/etc/php/conf.d/custom-php.ini
       - ./docker/php/docker-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./docker/scripts/laravel-worker.conf:/etc/supervisor/conf.d/laravel-worker.conf

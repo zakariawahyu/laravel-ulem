@@ -28,7 +28,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <img class="image-output" id="image_output" name="image_output" src="{{ asset('images/'.(isset($story->image) ? $story->image : '')) }}" alt="Image Output">
+                        <img class="image-output" id="image_output" name="image_output" src="{{ asset('storage/'.(isset($story->image) ? $story->image : '')) }}" alt="Image Output">
                       </div>
                     <div class="mb-3">
                         <label class="form-label">Upload Image <i class="required">*</i></label>
