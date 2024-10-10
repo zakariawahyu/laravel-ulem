@@ -25,6 +25,7 @@ class StoryRequest extends FormRequest
             'title'         => 'required|max:255',
             'description'   => 'required|max:255',
             'image'         => 'sometimes|required|image|mimes:jpg,jpeg,png',
+            'image_caption' => 'required|max:255'
         ];
     }
 }

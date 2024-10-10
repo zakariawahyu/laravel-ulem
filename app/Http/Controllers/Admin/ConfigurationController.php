@@ -60,11 +60,11 @@ class ConfigurationController extends Controller
         $caption = Str::slug($data['title']);
 
         if ($request->hasFile('image')) {
-            $imageName = (new UploadImage)->upload('image-'.$caption);
+            $imageName = (new UploadImage)->upload('meta-image-'.$caption);
         }
 
         if ($request->hasFile('icon')) {
-            $iconName = (new UploadImage)->upload('icon-'.$caption, 'icon');
+            $iconName = (new UploadImage)->upload('meta-icon-'.$caption, 'icon');
         }
         
         $datas = [
@@ -139,16 +139,16 @@ class ConfigurationController extends Controller
         $data = $request->validated();
         $imageName = '';
 
-        $caption = Str::slug($data['title']);
-
         if ($request->hasFile('image')) {
-            $imageName = (new UploadImage)->upload('event-'.$caption);
+            $caption = Str::slug($data['image_caption']);
+            $imageName = (new UploadImage)->upload($caption);
         }
         
         $datas = [
             'type' => 'event',
             'title' => $data['title'],
             'description' => $data['description'],
+            'image_caption' => $data['image_caption'],
             'custom_data->date' => $data['date']
         ];
 
@@ -184,16 +184,16 @@ class ConfigurationController extends Controller
         $data = $request->validated();
         $imageName = '';
 
-        $caption = Str::slug($data['title']);
-
         if ($request->hasFile('image')) {
-            $imageName = (new UploadImage)->upload('story-'.$caption);
+            $caption = Str::slug($data['image_caption']);
+            $imageName = (new UploadImage)->upload($caption);
         }
         
         $datas = [
             'type' => 'story',
             'title' => $data['title'],
             'description' => $data['description'],
+            'image_caption' => $data['image_caption'],
         ];
 
         $story = Configuration::where('type', 'story')->first();
@@ -297,16 +297,16 @@ class ConfigurationController extends Controller
         $data = $request->validated();
         $imageName = '';
 
-        $caption = Str::slug($data['title']);
-
         if ($request->hasFile('image')) {
-            $imageName = (new UploadImage)->upload('rsvp-'.$caption);
+            $caption = Str::slug($data['image_caption']);
+            $imageName = (new UploadImage)->upload($caption);
         }
         
         $datas = [
             'type' => 'rsvp',
             'title' => $data['title'],
             'description' => $data['description'],
+            'image_caption' => $data['image_caption'],
         ];
 
         $rsvp = Configuration::where('type', 'rsvp')->first();
@@ -341,16 +341,16 @@ class ConfigurationController extends Controller
         $data = $request->validated();
         $imageName = '';
 
-        $caption = Str::slug($data['title']);
-
         if ($request->hasFile('image')) {
-            $imageName = (new UploadImage)->upload('thanks-'.$caption);
+            $caption = Str::slug($data['image_caption']);
+            $imageName = (new UploadImage)->upload($caption);
         }
         
         $datas = [
             'type' => 'thanks',
             'title' => $data['title'],
             'description' => $data['description'],
+            'image_caption' => $data['image_caption'],
         ];
 
         $thanks = Configuration::where('type', 'thanks')->first();

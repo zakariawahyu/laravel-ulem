@@ -24,8 +24,9 @@ class EventRequest extends FormRequest
         return [
             'title'         => 'required|max:255',
             'description'   => 'required|max:255',
-            'date'          => 'required|max:255',
+            'date'          => 'required|date',
             'image'         => 'sometimes|required|image|mimes:jpg,jpeg,png',
+            'image_caption' => 'required|max:255'
         ];
     }
 }

@@ -38,6 +38,13 @@
                         @endif
                     </div>
                     <div class="mb-3">
+                        <label class="form-label">Image Caption <i class="required">*</i></label>
+                        <input type="text" name="image_caption" class="form-control {{ ($errors->any() && $errors->has('image_caption')) ? 'is-invalid' : '' }}" placeholder="Insert Image Caption" value="{{ old('image_caption', isset($event->image_caption) ? $event->image_caption : '') }}" />
+                        @if ($errors->any() && $errors->has('image_caption'))
+                            <div class="invalid-feedback">{{ $errors->first('image_caption') }}</div>
+                        @endif
+                    </div>
+                    <div class="mb-3">
                         <label class="form-label">Date and Time <i class="required">*</i></label>
                         <input type="text" name="date" class="form-control {{ ($errors->any() && $errors->has('date')) ? 'is-invalid' : '' }}" placeholder="Choose date and time" id="flatpickr-datetime" value="{{ old('date', isset($event->custom_data->date) ? $event->custom_data->date : '') }}" readonly="readonly">
                         @if ($errors->any() && $errors->has('date'))

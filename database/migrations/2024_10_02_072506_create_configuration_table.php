@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image')->nullable();
+            $table->string('image_caption')->nullable();
             $table->json('custom_data')->nullable();
             $table->boolean('is_active');
             $table->timestamps();
