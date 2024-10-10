@@ -1,10 +1,10 @@
 <script>
-    // var lazyLoadInstance = new LazyLoad({
-    //     elements_selector: ".lazyload"
-    // });
-    // if (lazyLoadInstance) {
-    //     lazyLoadInstance.update();
-    // }
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazyload"
+    });
+    if (lazyLoadInstance) {
+        lazyLoadInstance.update();
+    }
     $("#formGift").validate({
         submitHandler: function (form) {
             form.submit();
