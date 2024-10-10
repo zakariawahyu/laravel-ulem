@@ -1,10 +1,4 @@
 <script>
-    var lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazyload"
-    });
-    if (lazyLoadInstance) {
-        lazyLoadInstance.update();
-    }
     $("#formGift").validate({
         submitHandler: function (form) {
             form.submit();
@@ -27,6 +21,8 @@
             gap: "1rem",
             perPage: 4,
             perMove: 1,
+            autoplay: true,
+            lazyload: true,
             breakpoints: {
                 992: {
                     perPage: 3,
