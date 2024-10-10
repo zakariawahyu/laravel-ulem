@@ -11,7 +11,7 @@
                                 @foreach ($galleries as $gallery)
                                 <li class="splide__slide position-relative">
                                     <a href="{{ asset('storage/'.$gallery->image) }}">
-                                        <img src="{{ asset('storage/'.$gallery->image) }}" title="{{ $gallery->image_caption }}" alt="{{ $gallery->image_caption }}" class="img-gallery" />
+                                        <img data-src="{{ asset('storage/'.$gallery->image) }}" alt="{{ $gallery->image_caption }}" class="img-gallery lazyload" />
                                     </a>
                                 </li>
                                 @endforeach

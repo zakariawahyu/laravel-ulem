@@ -59,7 +59,7 @@
                         <div class="col-md-6">
                             <div class="image-wrapper">
                                 <div class="image-element">
-                                    <img data-src="{{ asset('storage/'.$rsvp->image) }}" title="image {{ $rsvp->title }} zakaria yunanda" alt="image {{ $rsvp->title }} zakaria yunanda" class="lazyload" />
+                                    <img data-src="{{ asset('storage/'.$rsvp->image_caption) }}" alt="{{ $rsvp->image_caption }}" class="lazyload" />
                                 </div>
                             </div>
                         </div>

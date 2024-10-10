@@ -3,7 +3,7 @@
 <section class="couple-section color-primary moveable-section" data-id="1">
     <div class="image-wrapper">
         <div class="image-element">
-            <img data-src="{{ asset('storage/'.$event->image) }}" alt="{{ $event->title }}" title="{{ $event->title }}" class="lazyload" />
+            <img data-src="{{ asset('storage/'.$event->image) }}" alt="{{ $event->image_caption }}" class="lazyload" />
         </div>
     </div>
     <div class="couple-wrapper">
@@ -183,7 +183,7 @@
                                     </div>
                                 </div>
                                 <div class="image-element">
-                                    <img data-src="{{ asset('storage/'.$couple->image) }}" alt="{{ $couple->image_caption }}" title="{{ $couple->image_caption }}" class="couple-image man lazyload"
+                                    <img data-src="{{ asset('storage/'.$couple->image) }}" alt="{{ $couple->image_caption }}" class="couple-image man lazyload"
                                     />
                                 </div>
                                 <div class="ornaments-wrapper overflow-hidden">

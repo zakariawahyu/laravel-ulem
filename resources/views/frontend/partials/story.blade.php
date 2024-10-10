@@ -3,7 +3,7 @@
 <section class="story-section moveable-section" data-id="2">
     <div class="image-wrapper">
         <div class="image-element">
-            <img data-src="{{ asset('images/'.$story->image) }}" title="image {{ $story->title }}" alt="image {{ $story->title }}" class="story-background lazyload" />
+            <img data-src="{{ asset('storage/'.$story->image) }}" alt="{{ $story->image_caption }}" class="story-background lazyload" />
         </div>
         <div class="ornaments-wrapper overflow-hidden">
             <div class="corner-1">
