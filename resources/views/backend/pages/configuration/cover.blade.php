@@ -14,17 +14,17 @@
                 <form action="{{ route('configuration.cover.save') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label class="form-label">Title Opening<i class="required">*</i></label>
-                        <input type="text" name="title" class="form-control {{ ($errors->any() && $errors->has('title')) ? 'is-invalid' : '' }}" placeholder="Insert Title Opening" value="{{ old('title', isset($cover->title) ? $cover->title : '') }}" />
+                        <label class="form-label">Title<i class="required">*</i></label>
+                        <input type="text" name="title" class="form-control {{ ($errors->any() && $errors->has('title')) ? 'is-invalid' : '' }}" placeholder="Insert Title" value="{{ old('title', isset($cover->title) ? $cover->title : '') }}" />
                         @if ($errors->any() && $errors->has('title'))
                             <div class="invalid-feedback">{{ $errors->first('title') }}</div>
                         @endif
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Name Opening<i class="required">*</i></label>
-                        <input type="text" name="name_opening" class="form-control {{ ($errors->any() && $errors->has('name_opening')) ? 'is-invalid' : '' }}" placeholder="Insert Name Opening" value="{{ old('name_opening', isset($cover->custom_data->name_opening) ? $cover->custom_data->name_opening : '') }}" />
-                        @if ($errors->any() && $errors->has('name_opening'))
-                            <div class="invalid-feedback">{{ $errors->first('name_opening') }}</div>
+                        <label class="form-label">Subtitle<i class="required">*</i></label>
+                        <input type="text" name="subtitle" class="form-control {{ ($errors->any() && $errors->has('subtitle')) ? 'is-invalid' : '' }}" placeholder="Insert Subtitle" value="{{ old('subtitle', isset($cover->custom_data->subtitle) ? $cover->custom_data->subtitle : '') }}" />
+                        @if ($errors->any() && $errors->has('subtitle'))
+                            <div class="invalid-feedback">{{ $errors->first('subtitle') }}</div>
                         @endif
                     </div>
                     <div class="mb-3">

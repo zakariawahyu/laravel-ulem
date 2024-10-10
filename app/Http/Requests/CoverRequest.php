@@ -23,7 +23,7 @@ class CoverRequest extends FormRequest
     {
         return [
             'title'         => 'required|max:255',
-            'name_opening'  => 'required|max:255',
+            'subtitle'      => 'required|max:255',
             'description'   => 'required'
         ];
     }
