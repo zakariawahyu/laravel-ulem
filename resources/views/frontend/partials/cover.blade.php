@@ -51,7 +51,7 @@
                         <div class="position-relative" data-anim="zoom-out">
                             <p>{{ $cover->title }}</p>
                         </div>
-                        <h1 class="title cover_style notranslate" data-anim="fade-up">{{ $cover->custom_data->name }}</h1>
+                        <h1 class="title cover_style notranslate" data-anim="fade-up">{{ $cover->custom_data->subtitle }}</h1>
                         <div class="elements-widget" data-anim="fade-up">
                             <button class="btn btn-custom color-secondary" id="btn-envelope" data-anim="fade-up">
                                 <strong>Buka Undangan <i class="fas fa-envelope-open-text"></i></strong>
