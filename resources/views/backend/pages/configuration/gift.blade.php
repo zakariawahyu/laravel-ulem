@@ -22,7 +22,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Description <i class="required">*</i></label>
-                        <textarea name="description" class="form-control {{ ($errors->any() && $errors->has('description')) ? 'is-invalid' : '' }}" placeholder="Insert Description" cols="10" rows="5">{{ old('description', isset($gift->description) ? $gift->description : '') }}</textarea>
+                        <textarea id="description" name="description" class="form-control {{ ($errors->any() && $errors->has('description')) ? 'is-invalid' : '' }}" placeholder="Insert Description" cols="10" rows="5">{{ old('description', isset($gift->description) ? $gift->description : '') }}</textarea>
                         @if ($errors->any() && $errors->has('description'))
                             <div class="invalid-feedback">{{ $errors->first('description') }}</div>
                         @endif
@@ -35,4 +35,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('viewJs')
+    @include('backend.components.tinymce')
 @endsection

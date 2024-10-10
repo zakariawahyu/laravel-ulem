@@ -113,7 +113,7 @@ class ConfigurationController extends Controller
             'type' => 'cover',
             'title' => $data['title'],
             'description' => $data['description'],
-            'custom_data->name' => $data['name'],
+            'custom_data->name_opening' => $data['name_opening'],
         ];
 
         $cover = Configuration::where('type', 'cover')->first();

@@ -22,7 +22,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Description <i class="required">*</i></label>
-                        <textarea name="description" class="form-control {{ ($errors->any() && $errors->has('description')) ? 'is-invalid' : '' }}" placeholder="Insert Description" cols="10" rows="5">{{ old('description', isset($event->description) ? $event->description : '') }}</textarea>
+                        <textarea id="description" name="description" class="form-control {{ ($errors->any() && $errors->has('description')) ? 'is-invalid' : '' }}" placeholder="Insert Description" cols="10" rows="5">{{ old('description', isset($event->description) ? $event->description : '') }}</textarea>
                         @if ($errors->any() && $errors->has('description'))
                             <div class="invalid-feedback">{{ $errors->first('description') }}</div>
                         @endif
@@ -62,6 +62,7 @@
 @endsection
 
 @section('viewJs')
+@include('backend.components.tinymce')
 <script>
     var loadFile = function(event, el) {
         var output = document.getElementById(el.attr('id') + '_output');

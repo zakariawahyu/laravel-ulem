@@ -22,9 +22,9 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Name Opening<i class="required">*</i></label>
-                        <input type="text" name="name" class="form-control {{ ($errors->any() && $errors->has('name')) ? 'is-invalid' : '' }}" placeholder="Insert Name Opening" value="{{ old('name', isset($cover->custom_data->name) ? $cover->custom_data->name : '') }}" />
-                        @if ($errors->any() && $errors->has('name'))
-                            <div class="invalid-feedback">{{ $errors->first('name') }}</div>
+                        <input type="text" name="name_opening" class="form-control {{ ($errors->any() && $errors->has('name_opening')) ? 'is-invalid' : '' }}" placeholder="Insert Name Opening" value="{{ old('name_opening', isset($cover->custom_data->name_opening) ? $cover->custom_data->name_opening : '') }}" />
+                        @if ($errors->any() && $errors->has('name_opening'))
+                            <div class="invalid-feedback">{{ $errors->first('name_opening') }}</div>
                         @endif
                     </div>
                     <div class="mb-3">
