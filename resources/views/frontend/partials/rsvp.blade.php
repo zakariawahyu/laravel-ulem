@@ -29,6 +29,8 @@
                                 </div>
                                 <div class="title-section" data-anim="zoom-out">
                                     <h2>{{ $rsvp->title }}</h2>
+                                </div>
+                                <div class="position-relative" data-anim="fade-up">
                                     {!! $rsvp->description !!}
                                 </div>
                                 <div class="position-relative color__button__trans" id="cardRSVP">
@@ -59,7 +61,7 @@
                         <div class="col-md-6">
                             <div class="image-wrapper">
                                 <div class="image-element">
-                                    <img data-src="{{ asset('storage/'.$rsvp->image_caption) }}" alt="{{ $rsvp->image_caption }}" class="lazyload" />
+                                    <img data-src="{{ asset('storage/'.$rsvp->image) }}" alt="{{ $rsvp->image_caption }}" class="lazyload" />
                                 </div>
                             </div>
                         </div>

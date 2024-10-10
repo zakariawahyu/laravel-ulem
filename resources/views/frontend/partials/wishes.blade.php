@@ -38,6 +38,8 @@
                         <div class="card-body">
                             <div class="title-section" data-anim="zoom-out">
                                 <h2>{{ $wishes->title }}</h2>
+                            </div>
+                            <div class="position-relative" data-anim="fade-up">
                                 {!! $wishes->description !!}
                             </div>
                             <div class="guestbook_form_wrapper">

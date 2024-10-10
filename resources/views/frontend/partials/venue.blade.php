@@ -47,7 +47,7 @@
                             <h2>{{ $venue->title }}</h2>
                         </div>
                         <div class="position-relative" data-anim="fade-up">
-                            <p>{{ $venue->description }}</p>
+                            {!! $venue->description !!}
                         </div>
                     </div>
                 </div>

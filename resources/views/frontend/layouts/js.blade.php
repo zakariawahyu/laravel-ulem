@@ -6,7 +6,7 @@
 <script src="{{ asset('assets/frontend/libs/gsap/3.10.4/gsap.min.js')}}"></script>
 <script src="{{ asset('assets/frontend/libs/gsap/3.10.4/ScrollTrigger.min.js')}}"></script>
 <script src="{{ asset('assets/frontend/libs/gsap/3.11.4/Flip.min.js')}}"></script>
-<script src="{{ asset('assets/frontend/libs/lazysizes/5.3.2/lazysizes.min.js')}}" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ asset('assets/frontend/libs/lazyload/lazyload.min.js')}}" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{ asset('assets/frontend/libs/izitoast/1.4.0/js/iziToast.min.js')}}" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{ asset('assets/frontend/libs/jquery-validate/1.19.5/jquery.validate.min.js')}}" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
