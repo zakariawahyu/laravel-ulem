@@ -7,17 +7,24 @@ use Illuminate\Support\Facades\Redis;
 
 class HomeController extends Controller
 {
+    protected $configRedis;
+
+    public function __construct()
+    {
+        $this->configRedis = Redis::hGetAll(config('custom.key_config'));
+    }
+
     public function index(Request $request) {
-        $cover = self::getRedis(config('custom.key_config').'cover');
-        $event = self::getRedis(config('custom.key_config').'event');
-        $story = self::getRedis(config('custom.key_config').'story');
-        $venue = self::getRedis(config('custom.key_config').'venue');
-        $rsvp = self::getRedis(config('custom.key_config').'rsvp');
-        $wishes = self::getRedis(config('custom.key_config').'wishes');
-        $thanks = self::getRedis(config('custom.key_config').'thanks');
-        $couples = self::getRedis(config('custom.key_couples'));
-        $venueDetails = self::getRedis(config('custom.key_venue_details'));
-        $galleries = self::getRedis(config('custom.key_galleries'));
+        $cover          = self::getHashRedis('cover');
+        $event          = self::getHashRedis('event');
+        $story          = self::getHashRedis('story');
+        $venue          = self::getHashRedis('venue');
+        $rsvp           = self::getHashRedis('rsvp');
+        $wishes         = self::getHashRedis('wishes');
+        $thanks         = self::getHashRedis('thanks');
+        $couples        = self::getRedis(config('custom.key_couples'));
+        $venueDetails   = self::getRedis(config('custom.key_venue_details'));
+        $galleries      = self::getRedis(config('custom.key_galleries'));
 
         return view('frontend.home', compact(
             'cover',
@@ -35,5 +42,9 @@ class HomeController extends Controller
 
     private function getRedis($key) {
         return json_decode(Redis::get($key));
+    }
+
+    private function getHashRedis($type) {
+        return isset($this->configRedis[$type]) ? json_decode($this->configRedis[$type]) : '';
     }
 }

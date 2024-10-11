@@ -39,9 +39,17 @@ services:
     ports:
       - "6379:6379"
     volumes:
-        - ./docker/redis-data:/data
+      - ./docker/redis-data:/data
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD}", "--appendonly", "yes", "--save", "60", "10000", "--loglevel", "warning"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     networks:
-        - laravel
+      - laravel
 
   nginx:
     image: nginx:1.27.2-alpine

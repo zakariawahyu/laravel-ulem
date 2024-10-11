@@ -112,8 +112,10 @@ class CoupleController extends Controller
      * Publish data couple to redis
      */
     public function publish() {
-        $couples = Couple::all();
-        Redis::set(config('custom.key_couples'), json_encode($couples));
+        $couples    = Couple::all();
+        $data       = collect($couples)->except(['id', 'created_at', 'updated_at', 'deleted_at']);
+        
+        Redis::set(config('custom.key_couples'), json_encode($data));
 
         return redirect()->route('couple.index')->with('success', 'Successfully publish couples');
     }

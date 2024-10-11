@@ -40,7 +40,7 @@ class ConfigurationController extends Controller
             return response()->json("Error configuration's empty", 404);
         } else {
             $config->update(['is_active' => filter_var($is_active, FILTER_VALIDATE_BOOLEAN)]);
-            Redis::set(config('custom.key_config').$field, json_encode(collect($config)->except(['id', 'created_at', 'updated_at'])));
+            Redis::hSet(config('custom.key_config'), $field, json_encode(collect($config)->except(['id', 'created_at', 'updated_at'])));
         }
         $published = $is_active == "true" ? 'publish' : 'unplublish';
         return response()->json('Success '.$published.' configuration');

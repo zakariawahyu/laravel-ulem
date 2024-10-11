@@ -16,7 +16,7 @@ return [
         'wishes'    => 'Wishes',
         'thanks'    => 'Thanks'
     ],
-    'key_config' => ':config:',
+    'key_config' => 'configs',
     'key_couples' => 'couples',
     'key_venue_details' => 'venue_details',
     'key_galleries' => 'galleries'
