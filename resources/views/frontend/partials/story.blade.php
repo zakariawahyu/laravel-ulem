@@ -1,6 +1,6 @@
 @if (!empty($story) && $story->is_active == true)
 <!-- Start Story section -->
-<section class="story-section moveable-section" data-id="2">
+<section class="story-section">
     <div class="image-wrapper">
         <div class="image-element">
             <img data-src="{{ asset('storage/'.$story->image) }}" alt="{{ $story->image_caption }}" class="story-background lazyload" />

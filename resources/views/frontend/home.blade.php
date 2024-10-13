@@ -38,22 +38,15 @@
         <div class="moveable_section_wrapper position-relative">
             @include('frontend.partials.couple')
 
-            @include('frontend.partials.story')
-            
-            <section class="moveable-section" data-id="4">
-                @include('frontend.partials.venue')
-                @include('frontend.partials.rsvp')
-            </section>
+            @include('frontend.partials.venue')
+
+            @include('frontend.partials.gallery')
 
             @include('frontend.partials.wishes')
 
-            <!-- Apology section -->
+            @include('frontend.partials.story')
 
-            <!-- Egift section -->
-
-            <!-- Stream Section -->
-            
-            @include('frontend.partials.gallery')
+            @include('frontend.partials.rsvp')
 
             @include('frontend.partials.thanks')
         </div>

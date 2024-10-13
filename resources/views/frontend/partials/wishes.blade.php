@@ -1,6 +1,6 @@
 @if (!empty($wishes) && $wishes->is_active == true)
 <!-- Start Wishes section -->
-<section class="wishes-section moveable-section" data-id="6">
+<section class="wishes-section">
     <div class="wishes-form-wrapper color-primary">
         <div class="ornaments-wrapper">
             <div class="orn-1">

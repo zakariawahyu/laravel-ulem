@@ -126,15 +126,6 @@
         reload_guestbook_data();
     });
 
-    var section_order = [1, 2, 4, 6, 5, 7, 3, 8, 9];
-    var section_wrapper = $(".moveable_section_wrapper");
-
-    section_wrapper.append(
-        $.map(section_order, function (elm) {
-            return $(".moveable-section[data-id='" + elm + "']");
-        })
-    );
-
     $("#tambahdata").validate({
         submitHandler: function (form) {
             var actionType = $("#tombolsimpan").val();

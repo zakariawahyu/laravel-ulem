@@ -1,6 +1,6 @@
 @if (!empty($galleries))
 <!-- Start Gallery Section -->
-<section class="gallery-section moveable-section" data-id="3">
+<section class="gallery-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class=" col-11 col-md-12">

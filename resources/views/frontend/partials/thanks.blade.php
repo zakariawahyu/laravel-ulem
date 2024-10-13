@@ -1,6 +1,6 @@
 @if (!empty($thanks) && $thanks->is_active == true)
 <!-- Tanks Section -->
-<section class="thank-section moveable-section" data-id="9">
+<section class="thank-section">
     <div class="ornaments-wrapper overflow-hidden">
         <div class="orn-1">
             <div class="image-element">

@@ -1,6 +1,6 @@
 @if (!empty($event) && $event->is_active == true)
 <!-- Start Couple section -->
-<section class="couple-section color-primary moveable-section" data-id="1">
+<section class="couple-section color-primary" style="background-color: var(--color-main);color: var(--color-white)">
     <div class="image-wrapper">
         <div class="image-element">
             <img data-src="{{ asset('storage/'.$event->image) }}" alt="{{ $event->image_caption }}" class="lazyload" />
