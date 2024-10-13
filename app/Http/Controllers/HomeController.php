@@ -15,6 +15,7 @@ class HomeController extends Controller
     }
 
     public function index(Request $request) {
+        $meta           = self::getHashRedis('meta');
         $cover          = self::getHashRedis('cover');
         $event          = self::getHashRedis('event');
         $story          = self::getHashRedis('story');
@@ -27,6 +28,7 @@ class HomeController extends Controller
         $galleries      = self::getRedis(config('custom.key_galleries'));
 
         return view('frontend.home', compact(
+            'meta',
             'cover',
             'event',
             'story',

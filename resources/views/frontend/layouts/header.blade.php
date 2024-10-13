@@ -1,49 +1,46 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Virtual Wedding, Digital Invitation, Wedding Invitation, Marvelous Wedding, Unforgettable Wedding" />
-    <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-
-    <meta name="title" content="Welcome to the Wedding" />
-    <meta name="description" content="Digital Invitation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @if (!empty($meta))
+    <meta name="keywords" content="{{ $meta->custom_data->keywords }}" />
+    <meta name="title" content="{{ $meta->title }}" />
+    <meta name="description" content="{{ $meta->description }}" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:url" content="index.html" />
-    <meta property="og:title" content="Welcome to the Wedding" />
-    <meta property="og:description" content="Digital Invitation" />
-    <meta property="og:image" content=""/>
+    <meta property="og:site_name" content="@zakariayunanda" />
+    <meta property="og:url" content="{{ config('app.url') }}" />
+    <meta property="og:title" content="{{ $meta->title }}" />
+    <meta property="og:description" content="{{ $meta->description }}" />
+    <meta property="og:image" content="{{ $meta->image }}"/>
     <meta property="og:locale" content="id_ID" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="650" />
     <meta property="og:image:height" content="366" />
-    <meta property="og:image:alt" content="Welcome to the Wedding" />
+    <meta property="og:image:alt" content="{{ $meta->title }}" />
 
-    <meta property="ia:markup_url" content="index.html" />
-    <meta property="ia:markup_url_dev" content="index.html" />
-    <meta property="ia:rules_url" content="index.html" />
-    <meta property="ia:rules_url_dev" content="index.html" />
-    <meta property="fb:app_id" content="1673491666363514" />
+    <meta property="ia:markup_url" content="{{ config('app.url') }}" />
+    <meta property="ia:markup_url_dev" content="{{ config('app.url') }}" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="" />
-    <meta name="twitter:title" content="Welcome to the Wedding" />
-    <meta name="twitter:description" content="Digital Invitation" />
-    <meta name="twitter:image:src" content=""/>
+    <meta name="twitter:site" content="@zakariayunanda" />
+    <meta name="twitter:title" content="{{ $meta->title }}" />
+    <meta name="twitter:description" content="{{ $meta->description }}" />
+    <meta name="twitter:image:src" content="{{ $meta->image }}"/>
 
-    <meta itemprop="title" content="Welcome to the Wedding" />
-    <meta itemprop="name" content="Welcome to the Wedding" />
-    <meta itemprop="description" content="Digital Invitation" />
-    <meta itemprop="image"content=""/>
-    <title>Welcome to the Wedding</title>
-    <link rel="icon" href="" sizes="192x192"/>
-    <link rel="icon" href="" sizes="32x32"/>
-    <link rel="icon" href="" sizes="16x16"/>
+    <meta itemprop="title" content="{{ $meta->title }}" />
+    <meta itemprop="name" content="{{ $meta->title }}" />
+    <meta itemprop="description" content="{{ $meta->description }}" />
+    <meta itemprop="image"content="{{ $meta->image }}"/>
+    <title>{{ $meta->title }}</title>
+    <link rel="icon" href="{{ $meta->custom_data->icon }}"/>
 
     <meta name="google" content="notranslate" />
-    <meta name="thumbnailUrl" content="" itemprop="thumbnailUrl"/>
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow">
+    <meta name="thumbnailUrl" content="{{ $meta->image }}" itemprop="thumbnailUrl"/>
+    @endif
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com/" />

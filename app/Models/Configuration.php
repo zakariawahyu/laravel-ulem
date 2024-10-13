@@ -15,7 +15,7 @@ class Configuration extends Model
         'title', 
         'description', 
         'image',
-        'iamge_caption', 
+        'image_caption', 
         'is_active',
         'custom_data->keywords',
         'custom_data->author', 
