@@ -66,6 +66,14 @@
             </a>
         </li>
 
+        <!-- Guest List -->
+        <li class="menu-item {{ Route::is('guest-list.*') ? 'active' : '' }}">
+            <a href="{{ route('guest-list.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-book-open"></i>
+                <div data-i18n="Couple">Guest List</div>
+            </a>
+        </li>
+
         <!-- Configuration -->
         <li class="menu-item {{ Route::is('configuration.*') ? 'active open' : '' }}">
             <a href="" class="menu-link menu-toggle">

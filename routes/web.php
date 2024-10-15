@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CoupleController;
 use App\Http\Controllers\Admin\DashboardControler;
 use App\Http\Controllers\Admin\DatatablesController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\GuestListController;
 use App\Http\Controllers\Admin\VenueDetailController;
 use App\Http\Controllers\HomeController;
 use App\Http\Middleware\Auth;
@@ -22,6 +23,7 @@ Route::prefix('mimin')->middleware([Auth::class])->group(function () {
         Route::get('/couple', 'couple')->name('couple');
         Route::get('/gallery', 'gallery')->name('gallery');
         Route::get('/venue-detail', 'venueDetail')->name('venue-detail');
+        Route::get('/guest-list', 'guestList')->name('guest-list');
     });
 
     Route::controller(ConfigurationController::class)->prefix('configuration')->name('configuration.')->group(function () {
@@ -51,14 +53,17 @@ Route::prefix('mimin')->middleware([Auth::class])->group(function () {
     Route::get('/couple/publish', [CoupleController::class, 'publish'])->name('couple.publish');
     Route::get('/gallery/publish', [GalleryController::class, 'publish'])->name('gallery.publish');
     Route::get('/venue-detail/publish', [VenueDetailController::class, 'publish'])->name('venue-detail.publish');
+    Route::get('/guest-list/publish', [GuestListController::class, 'publish'])->name('guest-list.publish');
   
     Route::get('/couple/{id}/delete', [CoupleController::class, 'destroy'])->name('couple.delete');
     Route::get('/gallery/{id}/delete', [GalleryController::class, 'destroy'])->name('gallery.delete');
     Route::get('/venue-detail/{id}/delete', [VenueDetailController::class, 'destroy'])->name('venue-detail.delete');
+    Route::get('/guest-list/{id}/delete', [GuestListController::class, 'destroy'])->name('guest-list.delete');
 
     Route::resource('couple', CoupleController::class);
     Route::resource('gallery', GalleryController::class);
     Route::resource('venue-detail', VenueDetailController::class);
+    Route::resource('guest-list', GuestListController::class);
    
 });
 

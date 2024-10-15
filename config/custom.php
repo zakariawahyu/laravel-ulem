@@ -19,5 +19,6 @@ return [
     'key_config' => 'configs',
     'key_couples' => 'couples',
     'key_venue_details' => 'venue_details',
-    'key_galleries' => 'galleries'
+    'key_galleries' => 'galleries',
+    'key_guest_list' => 'guest_lists'
 ];
