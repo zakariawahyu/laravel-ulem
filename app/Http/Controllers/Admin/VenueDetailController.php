@@ -91,8 +91,10 @@ class VenueDetailController extends Controller
     */
     public function publish() {
         $venueDetails   = VenueDetail::all();
-        $data           = collect($venueDetails)->except(['id', 'created_at', 'updated_at', 'deleted_at']);
-        
+        $data           = $venueDetails->map(function ($item) {
+            return collect($item)->except(['id', 'created_at', 'updated_at', 'deleted_at']);
+        });
+
         Redis::set(config('custom.key_venue_details'), json_encode($data));
 
         return redirect()->route('venue-detail.index')->with('success', 'Successfully publish venue details');

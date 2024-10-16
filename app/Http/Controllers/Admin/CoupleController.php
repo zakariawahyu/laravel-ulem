@@ -113,7 +113,9 @@ class CoupleController extends Controller
      */
     public function publish() {
         $couples    = Couple::all();
-        $data       = collect($couples)->except(['id', 'created_at', 'updated_at', 'deleted_at']);
+        $data       = $couples->map(function ($item) {
+           return collect($item)->except(['id', 'created_at', 'updated_at', 'deleted_at']); 
+        });
         
         Redis::set(config('custom.key_couples'), json_encode($data));
 

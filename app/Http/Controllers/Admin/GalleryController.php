@@ -109,7 +109,9 @@ class GalleryController extends Controller
      */
     public function publish() {
         $galleries  = Gallery::all();
-        $data       = collect($galleries)->except(['id', 'created_at', 'updated_at', 'deleted_at']);
+        $data       = $galleries->map(function ($item) {
+           return collect($item)->except(['id', 'created_at', 'updated_at', 'deleted_at']);
+        });
         
         Redis::set(config('custom.key_galleries'), json_encode($data));
 
