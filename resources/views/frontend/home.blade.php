@@ -84,6 +84,13 @@
     <audio id="audio_file" class="d-none">
         <source src="{{ asset('assets/frontend/sound.mp3')}}" type="audio/mpeg" /> Your browser does not support the audio element.
     </audio>
+    <svg style="position: absolute;pointer-events: none;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <clipPath id="wishes-polygon" clipPathUnits="objectBoundingBox">
+                <polygon points="0 0, 1 1, 1 0" />
+            </clipPath>
+        </defs>
+    </svg>
 </body>
 
 @include('frontend/layouts/js')

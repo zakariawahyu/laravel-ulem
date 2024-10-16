@@ -14,7 +14,7 @@ class HomeController extends Controller
         $this->configRedis = Redis::hGetAll(config('custom.key_config'));
     }
 
-    public function index(Request $request) {
+    public function index(Request $request, $name = null) {
         $meta           = self::getHashRedis('meta');
         $cover          = self::getHashRedis('cover');
         $event          = self::getHashRedis('event');
@@ -26,6 +26,7 @@ class HomeController extends Controller
         $couples        = self::getRedis(config('custom.key_couples'));
         $venueDetails   = self::getRedis(config('custom.key_venue_details'));
         $galleries      = self::getRedis(config('custom.key_galleries'));
+        $guest          = json_decode(Redis::hGet(config('custom.key_guest_list'), $name));
 
         return view('frontend.home', compact(
             'meta',
@@ -38,7 +39,8 @@ class HomeController extends Controller
             'thanks',
             'couples',
             'venueDetails',
-            'galleries'
+            'galleries',
+            'guest',
         ));
     }
 

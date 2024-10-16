@@ -88,13 +88,16 @@ class GuestListController extends Controller
     }
 
     /**
-     * Publish data venue details to redis
+     * Publish data guest list to redis
     */
     public function publish() {
-        $guestList   = GuestList::all();
+        $guestList   = GuestList::whereNull('deleted_at')->get();
         $data        = $guestList->map(function($item){
             return [
-                $item->slug => $item->name
+                $item->slug => json_encode([
+                    'name'      => $item->name,
+                    'is_gift'   => $item->is_gift
+                ])
             ];
         })->collapse()->toArray();
 

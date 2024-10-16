@@ -49,6 +49,12 @@
                 <div class="cover-body">
                     <div class="cover-description">
                         <div class="position-relative" data-anim="zoom-out">
+                            @if (!empty($guest))
+                                <div class="greeting-wrapper">
+                                    <span class="greeting-text">Dear</span>
+                                    <h5 class="greeting-name-text" style="font-family: 'Abhaya Libre';font-size: 2rem;">{{ $guest->name }}</h5>
+                                </div>
+                            @endif
                             <p>{{ $cover->title }}</p>
                         </div>
                         <h1 class="title cover_style notranslate" data-anim="fade-up">{{ $cover->custom_data->subtitle }}</h1>

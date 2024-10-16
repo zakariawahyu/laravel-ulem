@@ -15,6 +15,7 @@ use App\Http\Middleware\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/to/{name}', [HomeController::class, 'index']);
 
 Route::get('/mimin-login', [AuthContoller::class, 'index'])->name('login');
 Route::post('/login', [AuthContoller::class, 'login'])->name('do-login');
