@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Config;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RsvpRequest extends FormRequest
+class MetaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,12 @@ class RsvpRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'         => 'required|max:255',
-            'description'   => 'required',
+            'title'         => 'required|min:30|max:65',
+            'description'   => 'required|min:120|max:320',
+            'keywords'      => 'required',
+            'author'        => 'required',
             'image'         => 'sometimes|required|image|mimes:jpg,jpeg,png',
-            'image_caption' => 'required|max:255'
+            'icon'          => 'sometimes|required|image|mimes:jpg,jpeg,png'
         ];
     }
 }

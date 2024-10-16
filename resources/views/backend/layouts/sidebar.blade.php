@@ -119,4 +119,12 @@
                 <div data-i18n="Gallery">Gallery</div>
             </a>
         </li>
+
+        <!-- Wish List -->
+        <li class="menu-item {{ Route::is('wish-list.*') ? 'active' : '' }}">
+            <a href="{{ route('wish-list.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-list-check"></i>
+                <div data-i18n="Gallery">Wish List</div>
+            </a>
+        </li>
 </aside>

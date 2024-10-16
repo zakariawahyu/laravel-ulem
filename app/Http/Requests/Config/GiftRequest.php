@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Config;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoryRequest extends FormRequest
+class GiftRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,6 @@ class StoryRequest extends FormRequest
         return [
             'title'         => 'required|max:255',
             'description'   => 'required',
-            'image'         => 'sometimes|required|image|mimes:jpg,jpeg,png',
-            'image_caption' => 'required|max:255'
         ];
     }
 }

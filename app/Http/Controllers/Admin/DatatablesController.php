@@ -8,6 +8,7 @@ use App\Models\Couple;
 use App\Models\Gallery;
 use App\Models\GuestList;
 use App\Models\VenueDetail;
+use App\Models\Wishes;
 use Yajra\DataTables\DataTables;
 
 class DatatablesController extends Controller
@@ -111,6 +112,29 @@ class DatatablesController extends Controller
             })
             ->addIndexColumn()
             ->rawColumns(['action', 'is_gift'])
+            ->make(true);
+    }
+
+    public function wishList() {
+
+        $wishes = Wishes::query()->whereNull('deleted_at');
+
+        return DataTables::of($wishes)
+            ->addColumn('action', function($wishes){
+                return'
+                <div class="text-center">
+                    <a href='.route('wish-list.show', $wishes->id).' class="btn btn-sm btn-success" title="Show"><i class="fa fa-eye"></i> Show</a>
+                    <a href='.route('wish-list.delete', $wishes->id).' class="btn btn-sm btn-danger" title="Delete"><i class="fa fa-trash"></i> Delete</a>
+                </div>';
+            })
+            ->editColumn('wish_description', function($wishes){
+                if (strlen($wishes->wish_description) > 15) {
+                    return substr($wishes->wish_description, 0, 15) . '...';
+                }
+                return $wishes->wish_description;
+            })
+            ->addIndexColumn()
+            ->rawColumns(['action', 'wish_description'])
             ->make(true);
     }
 }

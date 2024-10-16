@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Config;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MetaRequest extends FormRequest
+class StoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,12 +22,10 @@ class MetaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'         => 'required|min:30|max:65',
-            'description'   => 'required|min:120|max:320',
-            'keywords'      => 'required',
-            'author'        => 'required',
+            'title'         => 'required|max:255',
+            'description'   => 'required',
             'image'         => 'sometimes|required|image|mimes:jpg,jpeg,png',
-            'icon'          => 'sometimes|required|image|mimes:jpg,jpeg,png'
+            'image_caption' => 'required|max:255'
         ];
     }
 }

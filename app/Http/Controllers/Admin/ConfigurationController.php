@@ -3,15 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CoverRequest;
-use App\Http\Requests\EventRequest;
-use App\Http\Requests\GiftRequest;
-use App\Http\Requests\MetaRequest;
-use App\Http\Requests\RsvpRequest;
-use App\Http\Requests\StoryRequest;
-use App\Http\Requests\ThanksRequest;
-use App\Http\Requests\VenueRequest;
-use App\Http\Requests\WishesRequest;
+use App\Http\Requests\Config\CoverRequest;
+use App\Http\Requests\Config\EventRequest;
+use App\Http\Requests\Config\GiftRequest;
+use App\Http\Requests\Config\MetaRequest;
+use App\Http\Requests\Config\RsvpRequest;
+use App\Http\Requests\Config\StoryRequest;
+use App\Http\Requests\Config\ThanksRequest;
+use App\Http\Requests\Config\VenueRequest;
+use App\Http\Requests\Config\WishesRequest;
 use App\Libraries\UploadImage;
 use App\Models\Configuration;
 use Illuminate\Http\Request;
