@@ -54,9 +54,9 @@
     </div>
 
     @if (!empty($venueDetails))
-        @foreach ($venueDetails as $venueDetail)
+        @foreach ($venueDetails as $key => $venueDetail)
         <!-- Start Modal Location-->
-        <div class="modal show-maps" id="event{{ $venueDetail->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal show-maps" id="event{{ $key }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-body text-center">

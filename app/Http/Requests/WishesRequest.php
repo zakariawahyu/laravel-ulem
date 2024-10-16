@@ -22,8 +22,8 @@ class WishesRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'         => 'required|max:255',
-            'description'   => 'required',
+            'name'              => 'required|max:255',
+            'wish_description'  => 'required|max:300'
         ];
     }
 }

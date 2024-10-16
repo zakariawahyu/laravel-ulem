@@ -43,15 +43,14 @@
                                 {!! $wishes->description !!}
                             </div>
                             <div class="guestbook_form_wrapper">
-                                <form class="text-center color__button__trans" action="http://localhost/bookstore" method="post" id="guestbook_form">
-                                    <input type="hidden" name="_token" value="jnuhp9a2cIdzvpte9TMTHFvZ41JBQdM64PeoBDax" />
-                                    <input type="hidden" name="domain" value="localhost" />
+                                <form class="text-center color__button__trans" action="{{ route('wishes.store') }}" method="post" id="guestbook_form">
+                                    @csrf
                                     <div class="mb-3">
                                         <input type="text" name="name" placeholder="Nama" value="" class="form-control" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <textarea required name="comment" cols="30" rows="5" placeholder="Tulis harapan kamu" class="form-control" required></textarea>
+                                        <textarea name="wish_description" cols="30" rows="5" placeholder="Tulis harapan kamu" class="form-control" required></textarea>
                                     </div>
 
                                     <button type="submit" class="btn btn-custom color-secondary m-auto w-100" id="guestbook_submit_btn">Kirim</button>
@@ -99,7 +98,7 @@
                 <div class="col-md-8 col-lg-6">
                     <div class="card">
                         <div class="card-body text-left">
-                            <div id="wishes_wrapper" data-url="http://localhost.co/booksfour/localhost">
+                            <div id="wishes_wrapper" data-url="{{ route('wishes.show') }}">
                                 <p class="mb-4">
                                     <b>Sedang Memuat Komentar..</b>
                                 </p>

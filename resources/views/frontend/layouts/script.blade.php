@@ -206,16 +206,11 @@
 
             $.ajax({
                 data: $("#guestbook_form").serialize(),
-                url: "http://localhost/bookstore",
+                url: "{{ route('wishes.store') }}",
                 type: "POST",
                 dataType: "json",
                 success: function (data) {
-                    if (`id` == "en") {
-                        $(".guestbook_form_wrapper").html("<p class='text-center'>Thank you, you have left a comment</p>");
-                    } else {
-                        $(".guestbook_form_wrapper").html("<p class='text-center'>Terima Kasih, Anda telah memberikan komentar</p>");
-                    }
-
+                    $(".guestbook_form_wrapper").html("<p class='text-center'>Terima Kasih, Anda telah memberikan komentar</p>");
                     $("#guestbook_submit_btn").prop("disabled", false);
                     $("#guestbook_submit_btn").html("Send");
 

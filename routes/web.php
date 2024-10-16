@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\GuestListController;
 use App\Http\Controllers\Admin\VenueDetailController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\WishesController;
 use App\Http\Middleware\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,8 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/mimin-login', [AuthContoller::class, 'index'])->name('login');
 Route::post('/login', [AuthContoller::class, 'login'])->name('do-login');
 Route::get('/logout', [AuthContoller::class, 'logout'])->name('logout');
+Route::post('/wishes', [WishesController::class, 'store'])->name('wishes.store');
+Route::get('/wishes', [WishesController::class, 'show'])->name('wishes.show');
 
 Route::prefix('mimin')->middleware([Auth::class])->group(function () {
     Route::controller(DatatablesController::class)->prefix('datatable')->name('datatable.')->group(function () {

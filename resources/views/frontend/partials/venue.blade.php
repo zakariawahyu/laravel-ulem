@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="row justify-content-center row-venue">
                     @if (!empty($venueDetails))
-                        @foreach ($venueDetails as $venueDetail)
+                        @foreach ($venueDetails as $key => $venueDetail)
                         <div class="col-md-6 col-xl-5 position-relative">
                             <div class="card">
                                 <div class="card-body">
@@ -131,7 +131,7 @@
                                                 <span class="notranslate">{{ $venueDetail->address }}</span>
                                             </div>
                                             <div class="widget-elements">
-                                                <a class="btn btn-custom color-secondary" data-anim="fade-up" aria-label="button maps" href="#" data-bs-toggle="modal" data-bs-target="#event{{ $venueDetail->id }}">Lihat Maps</a>
+                                                <a class="btn btn-custom color-secondary" data-anim="fade-up" aria-label="button maps" href="#" data-bs-toggle="modal" data-bs-target="#event{{ $key }}">Lihat Maps</a>
                                             </div>
                                         </div>
                                     </div>
