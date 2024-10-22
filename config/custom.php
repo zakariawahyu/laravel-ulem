@@ -21,5 +21,6 @@ return [
     'key_venue_details' => 'venue_details',
     'key_galleries' => 'galleries',
     'key_guest_list' => 'guest_lists',
-    'key_wishes' => 'wishes'
+    'key_wishes' => 'wishes',
+    'key_gift' => 'gifts'
 ];

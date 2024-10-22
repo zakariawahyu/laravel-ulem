@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('gift_details', function (Blueprint $table) {
+        Schema::create('gifts', function (Blueprint $table) {
             $table->id();
-            $table->enum('gift_type', ['tranfer', 'courier']);
-            $table->string('name');
             $table->string('bank');
-            $table->string('number');
-            $table->string('image');
-            $table->string('address');
+            $table->string('account_name');
+            $table->string('account_number');
             $table->timestamps();
             $table->softDeletes('deleted_at');
         });
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('gift_details');
+        Schema::dropIfExists('gifts');
     }
 };

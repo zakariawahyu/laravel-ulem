@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CoupleController;
 use App\Http\Controllers\Admin\DashboardControler;
 use App\Http\Controllers\Admin\DatatablesController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\GiftController;
 use App\Http\Controllers\Admin\GuestListController;
 use App\Http\Controllers\Admin\VenueDetailController;
 use App\Http\Controllers\Admin\WishesController as AdminWishesController;
@@ -30,6 +31,7 @@ Route::prefix('mimin')->middleware([Auth::class])->group(function () {
         Route::get('/venue-detail', 'venueDetail')->name('venue-detail');
         Route::get('/guest-list', 'guestList')->name('guest-list');
         Route::get('/wish-list', 'wishList')->name('wish-list');
+        Route::get('/gift', 'gift')->name('gift');
     });
 
     Route::controller(ConfigurationController::class)->prefix('configuration')->name('configuration.')->group(function () {
@@ -61,17 +63,20 @@ Route::prefix('mimin')->middleware([Auth::class])->group(function () {
     Route::get('/venue-detail/publish', [VenueDetailController::class, 'publish'])->name('venue-detail.publish');
     Route::get('/guest-list/publish', [GuestListController::class, 'publish'])->name('guest-list.publish');
     Route::get('/wish-list/publish', [AdminWishesController::class, 'publish'])->name('wish-list.publish');
+    Route::get('/gift/publish', [GiftController::class, 'publish'])->name('gift.publish');
   
     Route::get('/couple/{id}/delete', [CoupleController::class, 'destroy'])->name('couple.delete');
     Route::get('/gallery/{id}/delete', [GalleryController::class, 'destroy'])->name('gallery.delete');
     Route::get('/venue-detail/{id}/delete', [VenueDetailController::class, 'destroy'])->name('venue-detail.delete');
     Route::get('/guest-list/{id}/delete', [GuestListController::class, 'destroy'])->name('guest-list.delete');
     Route::get('/wish-list/{id}/delete', [AdminWishesController::class, 'destroy'])->name('wish-list.delete');
+    Route::get('/gift/{id}/delete', [GiftController::class, 'destroy'])->name('gift.delete');
 
     Route::resource('couple', CoupleController::class);
     Route::resource('gallery', GalleryController::class);
     Route::resource('venue-detail', VenueDetailController::class);
     Route::resource('guest-list', GuestListController::class);
     Route::resource('wish-list', AdminWishesController::class);
+    Route::resource('gift', GiftController::class);
 });
 
