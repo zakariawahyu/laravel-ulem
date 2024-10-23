@@ -90,7 +90,7 @@ class VenueDetailController extends Controller
      * Publish data venue details to redis
     */
     public function publish() {
-        $venueDetails   = VenueDetail::all();
+        $venueDetails   = VenueDetail::whereNull('deleted_at')->get();
         $data           = $venueDetails->map(function ($item) {
             return collect($item)->except(['id', 'created_at', 'updated_at', 'deleted_at']);
         });

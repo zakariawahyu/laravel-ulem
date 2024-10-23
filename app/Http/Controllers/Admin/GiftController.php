@@ -98,7 +98,7 @@ class GiftController extends Controller
         $data   = $gifts->map(function ($item) {
             $banks = config('custom.banks');
             $item['bank'] = $banks[$item->bank];
-            return collect($item)->except(['id', 'created_at', 'updated_at', 'deleted_at']); 
+            return collect($item)->only(['bank', 'account_name', 'account_number']); 
         });
         
         Redis::set(config('custom.key_gift'), json_encode($data));

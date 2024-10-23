@@ -112,7 +112,7 @@ class CoupleController extends Controller
      * Publish data couple to redis
      */
     public function publish() {
-        $couples    = Couple::all();
+        $couples    = Couple::whereNull('deleted_at')->get();
         $data       = $couples->map(function ($item) {
            return collect($item)->except(['id', 'created_at', 'updated_at', 'deleted_at']); 
         });
