@@ -24,7 +24,7 @@ class GiftRequest extends FormRequest
         return [
             'bank'          => 'required|max:255',
             'account_name'  => 'required|max:255',
-            'account_number'=> 'required|max:255',
+            'account_number'=> 'required|integer',
         ];
     }
 }

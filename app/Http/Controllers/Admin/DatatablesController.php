@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Couple;
 use App\Models\Gallery;
+use App\Models\Gift;
 use App\Models\GuestList;
 use App\Models\VenueDetail;
 use App\Models\Wishes;
@@ -135,6 +136,28 @@ class DatatablesController extends Controller
             })
             ->addIndexColumn()
             ->rawColumns(['action', 'wish_description'])
+            ->make(true);
+    }
+
+    public function gift() {
+
+        $gifts = Gift::query()->whereNull('deleted_at');
+
+        return DataTables::of($gifts)
+            ->addColumn('action', function($gifts){
+                return'
+                <div class="text-center">
+                    <a href='.route('gift.show', $gifts->id).' class="btn btn-sm btn-success" title="Show"><i class="fa fa-eye"></i> Show</a>
+                    <a href='.route('gift.edit', $gifts->id).' class="btn btn-sm btn-dark" title="Edit"><i class="fa fa-edit"></i> Edit</a>
+                    <a href='.route('gift.delete', $gifts->id).' class="btn btn-sm btn-danger" title="Delete"><i class="fa fa-trash"></i> Delete</a>
+                </div>';
+            })
+            ->editColumn('bank', function($gifts){
+                $banks = config('custom.banks');
+                return $banks[$gifts->bank];
+            })
+            ->addIndexColumn()
+            ->rawColumns(['action'])
             ->make(true);
     }
 }
