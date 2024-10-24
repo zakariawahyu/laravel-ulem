@@ -48,6 +48,8 @@
 
             @include('frontend.partials.rsvp')
 
+            @include('frontend.partials.gift')
+
             @include('frontend.partials.thanks')
         </div>
         @include('frontend/layouts/footer')

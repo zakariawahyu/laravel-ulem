@@ -21,12 +21,15 @@ class HomeController extends Controller
         $story          = self::getHashRedis('story');
         $venue          = self::getHashRedis('venue');
         $rsvp           = self::getHashRedis('rsvp');
+        $gift           = self::getHashRedis('gift');
         $wishes         = self::getHashRedis('wishes');
         $thanks         = self::getHashRedis('thanks');
         $couples        = self::getRedis(config('custom.key_couples'));
         $venueDetails   = self::getRedis(config('custom.key_venue_details'));
         $galleries      = self::getRedis(config('custom.key_galleries'));
         $guest          = json_decode(Redis::hGet(config('custom.key_guest_list'), $name));
+        $gifts          = self::getRedis(config('custom.key_gift'));
+        $guestBook      = $request->get('guest-book');
 
         return view('frontend.home', compact(
             'meta',
@@ -35,12 +38,15 @@ class HomeController extends Controller
             'story',
             'venue',
             'rsvp',
+            'gift',
             'wishes',
             'thanks',
             'couples',
             'venueDetails',
             'galleries',
             'guest',
+            'gifts',
+            'guestBook'
         ));
     }
 
