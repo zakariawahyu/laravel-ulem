@@ -21,7 +21,6 @@
             gap: "1rem",
             perPage: 4,
             perMove: 1,
-            autoplay: true,
             lazyload: true,
             breakpoints: {
                 992: {
