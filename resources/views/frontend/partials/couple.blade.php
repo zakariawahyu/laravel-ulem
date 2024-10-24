@@ -1,6 +1,6 @@
 @if (!empty($event) && $event->is_active == true)
 <!-- Start Couple section -->
-<section class="couple-section color-primary" style="color: var(--color-dark);">
+<section class="couple-section color-primary" style="background-color: var(--color-main);color: var(--color-white)">>
     <div class="image-wrapper">
         <div class="image-element">
             <img data-src="{{ asset('storage/'.$event->image) }}" alt="{{ $event->image_caption }}" class="lazyload" />
@@ -8,11 +8,6 @@
     </div>
     <div class="couple-wrapper">
         <div class="ornaments-wrapper overflow-hidden">
-            <div class="bg-1">
-                <div class="image-element">
-                    <img src="{{ asset('assets/frontend/img/joglo.webp') }}" alt="joglo" class="img-fluid" />
-                </div>
-            </div>
             <div class="orn-8">
                 <div class="image-element" data-anim="fade-up">
                     <img src="{{ asset('assets/frontend/img/bush.webp') }}" alt="bush" class="img-fluid" />
