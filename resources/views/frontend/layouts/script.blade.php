@@ -78,13 +78,6 @@
         $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/css/icofont/icofont.css")}}">');
         $("head").append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css" crossorigin="anonymous" referrerpolicy="no-referrer" />');
 
-        $.ajaxSetup({
-            headers: {
-                // 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                "X-Requested-With": "XMLHttpRequest",
-            },
-        });
-
         // font family
         let couple_name_on_main_font_family = "";
         let couple_name_on_cover_font_family = "";

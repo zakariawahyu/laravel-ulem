@@ -7,7 +7,6 @@
     <div class="main-app color-main">
         <!-- Loader -->
         <div class="loader-wrapper">
-            <script type="text/javascript" src="{{ asset('assets/frontend/js/cf-mirage2.min.js')}}"></script>
             <img alt="loading" class="spinner" data-cfsrc="{{ asset('assets/frontend/img/spinner.gif') }}" style="display: none; visibility: hidden;" />
             <noscript><img src="{{ asset('assets/frontend/img/spinner.gif') }}" alt="loading" class="spinner" /></noscript>
             <span>Please wait</span>
