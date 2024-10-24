@@ -47,7 +47,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
 
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/font.min.css')}}" />
 
     <!-- styles libraries -->

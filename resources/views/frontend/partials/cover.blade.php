@@ -55,9 +55,10 @@
                                     <h5 class="greeting-name-text" style="font-family: 'Abhaya Libre';font-size: 2rem;">{{ $guest->name }}</h5>
                                 </div>
                             @endif
+                            <img alt="joglo kembar" width="125" height="124" data-src="{{ asset('assets/frontend/img/joglo-kembar.png') }}" class="lazyload">
                             <p>{{ $cover->title }}</p>
                         </div>
-                        <h1 class="title cover_style notranslate" data-anim="fade-up">{{ $cover->custom_data->subtitle }}</h1>
+                        <h1 class="title cover_style" data-anim="fade-up">{{ $cover->custom_data->subtitle }}</h1>
                         <div class="elements-widget" data-anim="fade-up">
                             <button class="btn btn-custom color-secondary" id="btn-envelope" data-anim="fade-up">
                                 <strong>Buka Undangan <i class="fas fa-envelope-open-text"></i></strong>

@@ -78,18 +78,25 @@
         $("head").append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css" crossorigin="anonymous" referrerpolicy="no-referrer" />');
 
         // font family
+        let title_section = 'Baskerville Old Face';
         let couple_name_on_main_font_family = "";
-        let couple_name_on_cover_font_family = "";
-        let couple_name_on_couple_font_family = "";
+        let couple_name_on_cover_font_family = "Baskerville Classico";
+        let couple_name_on_couple_font_family = "Baskerville Classico";
         let parents_name_on_couple_font_family = "";
 
         // font size
         let couple_name_on_main_font_size = "";
-        let couple_name_on_cover_font_size = "";
+        let couple_name_on_cover_font_size = "40";
         let couple_name_on_couple_font_size = "";
         let parents_name_on_couple_font_size = "";
 
         // change font family and font size
+
+        $(".title-section h2").css({
+            "font-family": title_section,
+            "font-size": "38px"
+        });
+
         $(".main_style").css({
             "font-family": couple_name_on_main_font_family,
             "font-size": couple_name_on_main_font_size + "px",

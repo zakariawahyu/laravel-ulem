@@ -76,7 +76,7 @@
                             </div>
                             <div class="reminder-wrap">
                                 <div class="reminder-content">
-                                    <div class="countdown" date="{{ $event->custom_data->date }}" data-anim="zoom-out">
+                                    <div class="countdown" date="{{ Carbon\Carbon::parse($event->custom_data->date, 'Asia/Jakarta')->setTimezone('UTC'); }} UTC" data-anim="zoom-out">
                                         <div class="days">
                                             <p class="angka">00</p>
                                             <p class="huruf">
@@ -102,7 +102,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=The+Wedding+of+Yogie+%26+Riana&amp;details=Visit+the+invitation+here+<a%20href='https%3A%2F%2Flocalhost'>https%3A%2F%2Flocalhost</a>&amp;dates=20240915T110000%2F20240915T130000&amp;ctz=Asia%2FJakarta"
+                                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text={{ $meta->title }}&amp;details=Visit+the+invitation+here+<a%20href='{{ config('app.url') }}'>{{ config('app.url') }}</a>&amp;"
                                     target="_blank" class="btn btn-custom color-secondary btn-reminder" data-anim="fade-up">
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_2411_134)">
