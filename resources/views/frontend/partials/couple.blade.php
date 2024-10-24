@@ -76,7 +76,7 @@
                             </div>
                             <div class="reminder-wrap">
                                 <div class="reminder-content">
-                                    <div class="countdown" date="{{ Carbon\Carbon::parse($event->custom_data->date, 'Asia/Jakarta')->setTimezone('UTC'); }} UTC" data-anim="zoom-out">
+                                    <div class="countdown" date="{{ Carbon\Carbon::parse($event->custom_data->date, 'Asia/Jakarta')->setTimezone('UTC')->format('Y/m/d H:i:s'); }} UTC" data-anim="zoom-out">
                                         <div class="days">
                                             <p class="angka">00</p>
                                             <p class="huruf">

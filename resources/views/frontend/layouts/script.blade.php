@@ -70,7 +70,7 @@
 
     $(document).ready(function () {
         // fonts
-        $("head").append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />');
+       
 
         $("head").append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.11/css/splide.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />');
         $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/css/magnific-popup.css")}}">');
