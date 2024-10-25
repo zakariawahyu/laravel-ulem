@@ -131,41 +131,13 @@
             $("#tombolsimpan").html("Sending..");
             $.ajax({
                 data: $("#tambahdata").serialize(),
-                url: "http://localhost/generateVenueQr",
+                url: "{{ route('rsvp.store') }}",
                 type: "POST",
                 dataType: "json",
                 success: function (data) {
                     $("#tombolsimpan").html("Simpan");
 
-                    if (data.data.send_rsvp_qrcode == 0 || data.data.status == 0) {
-                        if (`id` == "en") {
-                            $("#cardRSVP").html("<p class='mb-5'>Thank you for confirming your attendance.</p>");
-                        } else {
-                            $("#cardRSVP").html("<p class='mb-5'>Terima kasih telah mengkonfirmasi kehadiran Anda.</p>");
-                        }
-                    } else {
-                        if (data.data.whatsapp_rsvp == 1) {
-                            if (`id` == "en") {
-                                $("#cardRSVP").html(
-                                    "<p class='m-4 text-center'>Thank you for confirming your attendance. We have sent a QR Code to your WhatsApp number. Please save the QR Code for later scanning at the event venue</p>"
-                                );
-                            } else {
-                                $("#cardRSVP").html(
-                                    "<p class='m-4 text-center'>Terima kasih telah mengkonfirmasi kehadiran Anda. Kami telah mengirimkan QR Code ke nomor WhatsApp Anda. Silahkan simpan QR Code tersebut untuk nantinya discan pada saat di venue acara</p>"
-                                );
-                            }
-                        } else {
-                            if (`id` == "en") {
-                                $("#cardRSVP").html(
-                                    "<p class='m-4 text-center'>Thank you for confirming your attendance. We have sent a QR Code to your email address. Please save the QR Code for later scanning at the event venue</p>"
-                                );
-                            } else {
-                                $("#cardRSVP").html(
-                                    "<p class='m-4 text-center'>Terima kasih telah mengkonfirmasi kehadiran Anda. Kami telah mengirimkan QR Code ke alamat email Anda. Silahkan simpan QR Code tersebut untuk nantinya discan pada saat di venue acara</p>"
-                                );
-                            }
-                        }
-                    }
+                    $("#cardRSVP").html("<p class='mb-5'>Terima kasih telah mengkonfirmasi kehadiran Anda.</p>");
 
                     ScrollTrigger.refresh();
 
@@ -180,7 +152,7 @@
                     $("#tombolsimpan").html("Simpan");
                     iziToast.error({
                         title: " Gagal Terkirim",
-                        message: "Mohon coba lagi",
+                        message: "Mohon coba lagi"+ (data.responseJSON.message ?? ""),
                         position: "bottomRight",
                     });
                 },

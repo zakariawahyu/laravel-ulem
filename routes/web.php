@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\GuestListController;
 use App\Http\Controllers\Admin\VenueDetailController;
 use App\Http\Controllers\Admin\WishesController as AdminWishesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RsvpController;
 use App\Http\Controllers\WishesController;
 use App\Http\Middleware\Auth;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,7 @@ Route::post('/login', [AuthContoller::class, 'login'])->name('do-login');
 Route::get('/logout', [AuthContoller::class, 'logout'])->name('logout');
 Route::post('/wishes', [WishesController::class, 'store'])->name('wishes.store');
 Route::get('/wishes', [WishesController::class, 'show'])->name('wishes.show');
+Route::post('/rsvp', [RsvpController::class, 'store'])->name('rsvp.store');
 
 Route::prefix('mimin')->middleware([Auth::class])->group(function () {
     Route::controller(DatatablesController::class)->prefix('datatable')->name('datatable.')->group(function () {
