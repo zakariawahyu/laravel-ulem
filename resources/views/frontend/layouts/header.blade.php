@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/libs/bootstrap/5.1.3/css/bootstrap.min.css')}}" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- styles custom -->
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/styles.min.css')}}?v=2" />
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/styles.min.css')}}?v=1.2" />
     <style>
         input.error,
         select.error {

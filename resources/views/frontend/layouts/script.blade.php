@@ -73,7 +73,7 @@
         $("head").append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />');
         $("head").append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.11/css/splide.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />');
         $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/css/magnific-popup.css")}}">');
-        $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/css/icofont/icofont.css")}}">');
+        $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/css/icofont/icofont.css?v=1.1")}}">');
         $("head").append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css" crossorigin="anonymous" referrerpolicy="no-referrer" />');
 
         // font family
