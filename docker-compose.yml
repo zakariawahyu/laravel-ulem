@@ -1,6 +1,23 @@
 services:
+  app:
+    image: ghcr.io/zakariawahyu/laravel-ulem:latest
+    container_name: laravel-ulem
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./.env:/var/www/.env
+      - app-data:/var/www
+      - ./docker/storage_app:/var/www/storage/app
+      - ./docker/php/production.ini:/usr/local/etc/php/conf.d/custom-php.ini
+      - ./docker/php/docker-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./docker/scripts/laravel-worker.conf:/etc/supervisor/conf.d/laravel-worker.conf
+    depends_on:
+      - db
+    networks:
+      - laravel
+
   db:
-    image: mysql:8.4
+    image: mariadb:10.6
     container_name: laravel-db
     restart: unless-stopped
     environment:
@@ -10,7 +27,6 @@ services:
       - '3306:3306'
     volumes:
       - ./docker/mysql-data:/var/lib/mysql
-      - ./docker/mysql:/docker-entrypoint-initdb.d
       - ./docker/mysql/mysql.cnf:/etc/mysql/mysql.cnf
     networks:
       - laravel
