@@ -19,3 +19,7 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
+/storage/debugbar/
+/docker/nginx/logs
+/docker/mysql-data
+/docker/redis-data

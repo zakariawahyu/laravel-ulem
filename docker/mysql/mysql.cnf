@@ -1,0 +1,17 @@
+[mysqld]
+innodb_buffer_pool_size = 64M
+innodb_log_buffer_size=1M
+key_buffer_size = 8M
+query_cache_size = 0
+max_connections = 10
+table_open_cache = 64
+thread_cache_size = 4
+performance_schema = off
+
+slow_query_log = 0
+general_log = 0
+
+skip-innodb-doublewrite
+skip-log-bin
+skip-networking
+skip-name-resolve
