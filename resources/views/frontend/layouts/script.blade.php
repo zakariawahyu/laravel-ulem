@@ -70,7 +70,7 @@
 
     $(document).ready(function () {
         // fonts
-        $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/libs/font-awesome/css/all.min.cs")}}" crossorigin="anonymous" referrerpolicy="no-referrer" />');
+        $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/libs/font-awesome/css/all.min.css")}}" crossorigin="anonymous" referrerpolicy="no-referrer" />');
         $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/libs/splidejs/3.6.11/css/splide.min.css")}}" crossorigin="anonymous" referrerpolicy="no-referrer" />');
         $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/css/magnific-popup.css")}}">');
         $("head").append('<link rel="stylesheet" href="{{ asset("assets/frontend/libs/izitoast/1.4.0/css/iziToast.css")}}" crossorigin="anonymous" referrerpolicy="no-referrer" />');
