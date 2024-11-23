@@ -28,7 +28,7 @@
 
         <div class="position-fixed d-flex m-4 p-0" style="bottom: 0; right: 0px; z-index: 20;">
             <button id="musicControl" class="btn btn-pink m-auto c-pointer d-flex flex-column btn-control">
-                <i id="playPause" class="icofont icofont-ui-pause text-white mx-auto my-auto"></i>
+                <i id="playPause" class="fa-solid fa-pause text-white mx-auto my-auto"></i>
             </button>
         </div>
 
