@@ -223,7 +223,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="sosmed-wrap" data-anim="fade-up">
+                                <div class="sosmed-wrap" data-anim="fade-up" style="background: none;">
                                     <p>{{ $couple->instagram_url }}</p>
                                 </div>
                             </div>
