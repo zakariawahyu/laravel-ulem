@@ -224,9 +224,7 @@
                                     </div>
                                 </div>
                                 <div class="sosmed-wrap" data-anim="fade-up">
-                                    <a href="{{ $couple->instagram_url }}" class="sosmed color-secondary notranslate" target="_blank">
-                                        <small><i class="fab fa-instagram"></i></small>
-                                    </a>
+                                    <p>{{ $couple->instagram_url }}</p>
                                 </div>
                             </div>
                         </div>

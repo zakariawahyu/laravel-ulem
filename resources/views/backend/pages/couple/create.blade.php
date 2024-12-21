@@ -59,8 +59,8 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Instagram URL <i class="required">*</i></label>
-                        <input type="url" name="instagram_url" class="form-control {{ ($errors->any() && $errors->has('instagram_url')) ? 'is-invalid' : '' }}" placeholder="Insert Instagram URL" value="{{ old('instagram_url') }}" />
+                        <label class="form-label">Instagram URL - Aka Address <i class="required">*</i></label>
+                        <input type="text" name="instagram_url" class="form-control {{ ($errors->any() && $errors->has('instagram_url')) ? 'is-invalid' : '' }}" placeholder="Insert Instagram URL" value="{{ old('instagram_url') }}" />
                         @if ($errors->any() && $errors->has('instagram_url'))
                             <div class="invalid-feedback">{{ $errors->first('instagram_url') }}</div>
                         @endif
